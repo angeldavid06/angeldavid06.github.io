@@ -80,7 +80,7 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--background-aux); 
+  background: var(--background-main); 
 }
 
 *::-webkit-scrollbar-track:hover,
@@ -88,8 +88,8 @@ body {
   background: var(--background-aux);
 }
 
-*::-webkit-scrollbar-thumb {
-  background: var(--background-main);  
+*::-webkit-scrollbar-thumb {  
+  background: var(--background-aux); 
 }
 
 /* 
@@ -314,8 +314,13 @@ body {
 }
 
 .nav .nav-item {
-    padding: 10px;
+    padding: 10px 15px;
     text-decoration: none;
+    border-radius: var(--radius);
+}
+
+.nav .active {
+    background-color: var(--color-blue);
 }
 
 .nav .nav-item:hover {
@@ -428,6 +433,10 @@ h6 {
 
 .txt-justify {
     text-align: justify;
+}
+
+ul, ol {
+    padding: 0px 0px 0px 30px;
 }
 
 /* 
