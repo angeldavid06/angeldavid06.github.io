@@ -1,0 +1,179 @@
+.main {
+    position: relative;
+    background-image: url('../img/background-main.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+    background-color: rgba(100, 142, 197, 0.5);
+}
+
+.main h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0;
+}
+
+.card {
+    min-width: 22.5%;
+    max-width: 22.5%;
+    min-height: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+    position: relative;
+    margin: 0px 3.33% 2.5% 0px;
+}
+
+.card:nth-child(4n) {
+    margin: 0px 0% 2.5% 0px;
+}
+
+.card:hover .name-icon {
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(100, 142, 197, 0.7);
+}
+
+.card:hover .name {
+    padding: 0;
+    text-align: center;
+}
+
+.card:hover .name h5 {
+    padding: 15px 0px 0px 0px;
+    color: white;
+}
+
+.card:hover .icon {
+    min-width: 35%;
+    max-width: 35%;
+}
+
+.card .image {
+    height: 100%;
+}
+
+.card .image-xd {
+    background-image: url(../img/bg-xd.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-figma {
+    background-image: url(../img/bg-Figma.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-html {
+    background-image: url(../img/bg-xd.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-css {
+    background-image: url(../img/bg-css.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.card .image-sass {
+    background-image: url(../img/bg-css.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-bootstrap {
+    background-image: url(../img/bg-css.png);
+    background-size: cover;
+    background-position: right;
+}
+
+.card .image-javascript {
+    background-image: url(../img/bg-javascript.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.card .image-jquery {
+    background-image: url(../img/bg-javascript.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-php {
+    background-image: url(../img/bg-php.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.card .image-sql {
+    background-image: url(../img/bg-sql.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.card .image-github {
+    background-image: url(../img/github.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .name {
+    padding: 0px 0px 0px 20px;
+}
+
+.card .name-icon {
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px;
+    height: 70px;
+    bottom: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        min-width: 45%;
+        max-width: 45%;
+        margin: 0px 5% 5% 0px;
+    }
+
+    .card:nth-child(2n) {
+        margin: 0px 0% 5% 0px;
+    }
+
+    /* .card .name-icon {
+        height: 0px;
+        padding: 0;      
+    } */
+
+    .card .name-icon .icon {
+        min-width: 0px;
+        max-width: 0px;
+    }
+
+    .card:hover .icon {
+        min-width: 35%;
+        max-width: 35%;
+    }
+    
+    .card .name-icon .name {
+        text-align: center;
+    }
+
+    .card .name-icon .name {
+        padding: 0px;
+    }
+}

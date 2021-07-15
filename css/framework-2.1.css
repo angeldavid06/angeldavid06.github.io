@@ -26,40 +26,16 @@ body {
     --color-yellow-03: rgba(237, 179, 3,0.3);
     --color-green-03: rgba(49, 158, 79,0.3);
     --color-blue-03: rgba(45, 159, 252,0.3);
-}
 
-/* 
-    Asignación de variables en el tema oscuro.
-*/
+    --background-main: #FFFFFF;
+    --background-aux: #323640;
+    --background-aux-03: rgba(32, 32, 32, 0.3);
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-main: #26272E;
-        --background-aux: #323640;
-        --background-aux-03: rgba(32, 32, 32, 0.3);
+    --focus: rgba(242, 242, 242, 0.3);
+    
+    --color-text: #707070;
 
-        --focus: rgba(242, 242, 242, 0.3);
-        
-        --color-text: rgb(242, 242, 242);
-
-        --border: 1px solid rgba(242, 242, 242, 0.3);
-    }
-}
-
-/* 
-    Asignación de variables en el tema claro.
-*/
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-main: #FFFFFF;
-        --background-aux: #F7F7F7;
-        --background-aux-03: rgba(247, 247, 247, 0.3);
-
-        --color-text: rgba(0, 0, 0, 0.85);
-        
-        --border: 1px solid rgba(0, 0, 0, 0.3);
-    }
+    --border: 1px solid rgba(242, 242, 242, 0.3);
 }
 
 /* 
@@ -309,17 +285,20 @@ body {
 
 .nav {
     margin: 0;
-    padding: 0px 20px;
+    padding: 10px 20px;
     position: relative;
+    transition: all .4s;
 }
 
 .nav .nav-item {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: var(--radius);
+    color: white;
 }
 
 .nav .active {
+    color: white;
     background-color: var(--color-blue);
 }
 
@@ -375,6 +354,19 @@ body {
     transition: all .5s;
 }
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 2;
+}
+
 /* 
     Estilos del texto.
 */
@@ -390,6 +382,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
     width: 100%;
     font-weight: 500;
     padding: 15px 0px;
