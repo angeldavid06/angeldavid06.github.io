@@ -287,7 +287,11 @@ body {
     margin: 0;
     padding: 10px 20px;
     position: relative;
-    transition: all .4s;
+    transition: all .3s;
+}
+
+.nav .btn-menu-icon {
+    display: none;
 }
 
 .nav .nav-item {
@@ -446,6 +450,7 @@ ul, ol {
     border-radius: 5px;
     background-color: rgba(242, 242, 242, 0.3);
     margin: 15px 15px 15px 0px;
+    text-decoration: none;
 }
 
 .btn-icon {
@@ -639,6 +644,33 @@ img, svg {
         width: 100%;
         max-width: 100%;
         min-width: 100%;
+    }
+
+    .nav .btn-menu {
+        width: 100%;
+        text-align: right;
+        z-index: 99999;
+    }
+
+    .nav .btn-menu-icon {
+        display: block;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .nav-items {
+        position: absolute;
+        top: -200%;
+        left: 0;
+        overflow: hidden;
+        padding: 10px;
+        background-color: var(--background-aux);
+        transition: all .3s;
+    }
+    
+    .nav-items-show {
+        top: 100%;
     }
 
     .nav .nav-item {
