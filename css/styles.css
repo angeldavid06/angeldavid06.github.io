@@ -31,7 +31,15 @@
     border-radius: 10px;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
     position: relative;
+    left: 200px;
+    opacity: 0;
     margin: 0px 3.33% 2.5% 0px;
+    transition: all .3s;
+}
+
+.card-show {
+    left: 0px;
+    opacity: 1;
 }
 
 .card:nth-child(4n) {
@@ -142,6 +150,12 @@
 
 .card .image-github {
     background-image: url(../img/github.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-java {
+    background-image: url(../img/bg-java.jpg);
     background-size: cover;
     background-position: center;
 }
