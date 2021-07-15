@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     z-index: inherit;
-    background-color: rgba(100, 142, 197, 0.5);
+    background-color: rgba(61, 111, 177, 0.5);
 }
 
 .main h1 {
@@ -42,50 +42,7 @@
     height: 100%;
     justify-content: center;
     backdrop-filter: blur(1px);
-}
-
-.card:hover .xd {
-    background-color: rgba(71, 1, 55, 0.5);
-}
-
-.card:hover .figma {
-    background-color: rgba(53, 53, 53, 0.5);
-}
-
-.card:hover .html {
-    background-color: rgba(228, 77, 38, 0.5);
-}
-
-.card:hover .css {
-    background-color: rgba(38, 77, 228, 0.5);
-}
-
-.card:hover .sass {
-    background-color: rgba(205, 103, 153, 0.5);
-}
-
-.card:hover .bootstrap {
-    background-color: rgba(86, 61, 124, 0.5);
-}
-
-.card:hover .javascript {
-    background-color: rgba(247, 223, 30, 0.5);
-}
-
-.card:hover .jquery {
-    background-color: rgba(33, 96, 155, 0.5);
-}
-
-.card:hover .php {
-    background-color: rgba(124, 143, 209, 0.5);
-}
-
-.card:hover .mysql {
-    background-color: rgba(0, 84, 107, 0.5);
-}
-
-.card:hover .github {
-    background-color: rgba(22, 22, 20, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .card:hover .name {
@@ -95,7 +52,8 @@
 
 .card:hover .name h5 {
     padding: 15px 0px 0px 0px;
-    color: white;
+    color: var(--background-main);
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
 }
 
 .card:hover .icon {
@@ -147,21 +105,21 @@
 }
 
 .card .image-sass {
-    background-image: url(../img/bg-css.png);
+    background-image: url(../img/glasses.svg);
     background-size: cover;
     background-position: center;
 }
 
 .card .image-bootstrap {
-    background-image: url(../img/bg-css.png);
+    background-image: url(../img/bg-bootstrap-themes.png);
     background-size: cover;
     background-position: right;
 }
 
 .card .image-javascript {
-    background-image: url(../img/bg-javascript.png);
+    background-image: url(../img/bg-javascript.webp);
     background-size: cover;
-    background-position: left;
+    background-position: center;
 }
 
 .card .image-jquery {
@@ -177,9 +135,9 @@
 }
 
 .card .image-sql {
-    background-image: url(../img/bg-sql.png);
+    background-image: url(../img/bg-mysql.png);
     background-size: cover;
-    background-position: left;
+    background-position: right;
 }
 
 .card .image-github {

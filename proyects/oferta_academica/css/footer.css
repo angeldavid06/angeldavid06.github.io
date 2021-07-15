@@ -1,0 +1,138 @@
+body footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(38, 44, 75,0.9);
+}
+
+body footer div {
+    width: 100%;
+}
+
+body footer .info {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+body footer .info .contacto {
+    width: 20%;
+    padding: 40px;
+}
+
+body footer .info .contacto ul li {
+    color: var(--fondo);
+}
+
+body footer .info .contacto ul li a {
+    text-decoration: none;
+    color: var(--fondo);
+}
+
+body footer .info .contacto ul li a:hover {
+    text-decoration: underline;
+}
+
+body footer .info .ubicacion {
+    width: 60%;
+    padding: 40px 40px 40px 0px;
+    display: flex;
+}
+
+body footer .info .ubicacion .direccion p {
+    line-height: 1.5em;
+    color: var(--fondo);
+}
+
+body footer .info .ubicacion .direccion {
+    width: 45%;
+}
+
+body footer .info .ubicacion .mapa {
+    width: 100%;
+    overflow: hidden;
+}
+
+body footer .info .ubicacion .mapa .frame {
+    width: 100%;
+    height: 300px;
+    padding: 0px 0px 0px 40px;
+    overflow: hidden;
+}
+
+body footer .info .contacto ul {
+    list-style: none;
+    line-height: 1.5em;
+}
+
+body footer .info div h2 {
+    font-size: 1.8em;
+    padding-bottom: 20px;
+    color: var(--fondo);
+}
+
+body footer .copy {
+    background-color: rgba(38, 44, 75, 1.0);
+}
+
+body footer .copy p {
+    padding: 20px;
+    text-align: center;
+    color: var(--fondo);
+}
+
+@media screen and (max-width: 1366px) {
+    body footer .info {
+        width: 90%;
+    }
+
+    body footer .info .contacto {
+        width: 30%;
+    }
+
+    body footer .info .ubicacion {
+        width: 70%;
+        padding: 40px 40px 40px 0px;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body footer .info {
+        width: 100%;
+    }
+
+    body footer .info {
+        flex-wrap: wrap;
+    }
+    
+    body footer .info .contacto,
+    body footer .info .ubicacion {
+        width: 100%;
+    }
+
+    body footer .info .contacto {
+        padding: 20px 20px 20px 20px;
+    }
+
+    body footer .info .ubicacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px 20px 20px 20px;
+    }
+
+    body footer .info .ubicacion .direccion {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    body footer .info .ubicacion .mapa {
+        width: 100%;
+    }
+
+    body footer .info .ubicacion .mapa .frame {
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+    }
+}

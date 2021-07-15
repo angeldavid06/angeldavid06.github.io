@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    <meta name="theme-color" content="rgba(5, 111, 150, 1)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Button</title>
+  </head>
+  <body>
+    <div class="mostrar-menu">
+      <img src="img/icons/menu.png" alt="">
+    </div>
+    <div class="contact-modal">
+      <div class="cerrar">
+        <i class="material-icons">close</i>
+      </div>
+      <h1>Contact</h1>
+      <div class="form">
+        <form name="formulario_contact_modal" class="form-preview checkbox-preview radio-preview" action="index.html" method="post">
+          <div class="input-group">
+            <input id="input-8" class="text-input -input" type="text" name="check-1" required>
+            <label for="input-8" class="label ">Name</label>
+          </div>
+          <div class="input-group">
+            <input id="input-9" class="text-input -input" type="email" name="check-1" required>
+            <label for="input-9" class="label">Email</label>
+          </div>
+          <div class="input-group">
+            <input id="input-10" class="text-input -input" type="text" name="check-1" required>
+            <label for="input-10" class="label ">Subject</label>
+          </div>
+          <div class="input-group">
+            <textarea id="input-11" name="name" rows="8" cols="80"></textarea>
+            <label for="input-11" class="label">Message</label>
+          </div>
+          <button class="button button-color color-1 -icon" type="submit" name="button"><img  class="-img" src="img/icons/submit.png" alt="">Submit</button>
+        </form>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header-logo">
+        <div class="logo-img -button">
+        </div>
+      </div>
+      <nav class="mainmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="submenu"><a>Elements<span><i class="material-icons">keyboard_arrow_down</i></span></a>
+              <ul class="sub-menu">
+                <li><a href="button.html">Buttons</a></li>
+                <li><a href="card.html">Cards</a></li>
+                <li><a href="color.html">Colors</a></li>
+                <li><a href="form.html">Forms</a></li>
+                <li><a href="table.html">Table</a></li>
+              </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#" class="button orange-dark contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="welcome">
+        <div class="circle circle-1 sub-page"></div>
+        <div class="circle circle-2 sub-page"></div>
+        <div class="circle circle-3 sub-page"></div>
+        <div class="circle circle-4 sub-page"></div>
+        <div class="circle circle-5 sub-page"></div>
+        <div class="welcome-content">
+          <h1>Button & Input</h1>
+          <p>Lorem ipsum Lorem ipsum Lorem ipsum. </p>
+        </div>
+      </div>
+    </div>
+    <div class="main-button">
+      <h1>Button</h1>
+      <div class="button">
+        <h2>Pick your style</h2>
+        <div class="button-preview-style">
+          <button class="button-style color-1" type="button" name="button"><a href="page.html">Button</a></button>
+          <button class="button-style color-1 button-2" type="button" name="button"><a href="page.html">Button</a></button>
+          <button class="button-style color-1 -icon" type="button" name="button"><span><i class="material-icons">info_outline</i></span><a href="page.html">Button</a></button>
+          <button class="button-style color-1 -icon-self" type="button" name="button"><span><a href="page.html"><i class="material-icons">info_outline</i></a></span></button>
+        </div>
+        <h2>Pick your size</h2>
+        <div class="button-preview-size">
+          <button class="button-size-small color-1" type="button" name="button"><a href="page.html">Small</a></button>
+          <button class="button-size-normal color-1" type="button" name="button"><a href="page.html">Normal</a></button>
+          <button class="button-size-large color-1" type="button" name="button"><a href="page.html">Large</a></button>
+        </div>
+        <h2>Pick your color</h2>
+        <div class="button-preview-color">
+          <button class="button-color color-1 -icon" type="button" name="button"><span><i class="material-icons">info_outline</i></span><a href="page.html">Primary</a></button>
+          <button class="button-color color-2 -icon" type="button" name="button"><span><i class="material-icons">info_outline</i></span><a href="page.html">Orange</a></button>
+          <button class="button-color color-3 -icon" type="button" name="button"><span><i class="material-icons">info_outline</i></span><a href="page.html">Orange Dark</a></button>
+          <button class="button-color color-4 -icon" type="button" name="button"><span><i class="material-icons">info_outline</i></span><a href="page.html">Green</a></button>
+          <button class="button-color color-5 -icon disabled" type="button" name="button"><span><i class="material-icons">info_outline</i></span><a href="page.html">Disabled</a></button>
+        </div>
+      </div>
+      <h1>Input</h1>
+      <div class="input">
+        <h2>Checkbox</h2>
+        <div class="checkbox-preview">
+          <input id="check-1" class="check check-1" type="checkbox" name="check-1">
+          <label for="check-1" class="check-label-1">Checkbox</label>
+          <input id="check-2" class="check check-1" type="checkbox" name="check-2">
+          <label for="check-2" class="check-label-1">Checkbox</label>
+        </div>
+        <h2>Radio</h2>
+        <div class="radio-preview">
+          <input class="radio" id="radio-1" type="radio" name="radio">
+          <label class="radio-label" for="radio-1">Radio</label>
+          <input class="radio" id="radio-2" type="radio" name="radio">
+          <label class="radio-label" for="radio-2">Radio</label>
+          <input class="radio" id="radio-3" type="radio" name="radio">
+          <label class="radio-label" for="radio-3">Radio</label>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <div class="main-footer">
+        <div class="footer-content">
+          <h1>Footer Content</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="footer-Links">
+          <h1>Elements</h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="card.html">Cards</a></li>
+            <li><a href="color.html">Colors</a></li>
+            <li><a href="form.html">Forms</a></li>
+            <li><a href="table.html">Table</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© 2018 Copyright Text</p>
+        <a href="#">more links</a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/form-c.js"></script>
+    <script type="text/javascript" src="js/form-cm.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+  </body>
+</html>

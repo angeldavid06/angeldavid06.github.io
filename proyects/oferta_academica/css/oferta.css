@@ -1,0 +1,191 @@
+body header {
+    height: 40%;
+}
+
+body .arqu {
+    background-image: url(../img/arqu.jpg);
+}
+
+body .iecl {
+    background-image: url(../img/elec.jpg);
+}
+
+body .imec {
+    background-image: url(../img/meca.jpg);
+}
+
+body .isau {
+    background-image: url(../img/auto.jpg);
+}
+
+body .isc {
+    background-image: url(../img/isc.jpg);
+}
+
+body header .nombre_carrera {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body header .nombre_carrera .nombre {
+    width: 70%;
+}
+
+body header .nombre_carrera .nombre h1 {
+    color: var(--fondo);
+    text-align: left;
+    font-size: 3em;
+}
+
+body .oferta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+body .oferta > div {
+    width: 70%;
+}
+
+body .oferta .reticula {
+    width: 70%;
+}
+
+body .oferta > div h2 {
+    font-size: 1.8em;
+    padding: 20px 0px;
+}
+
+body .oferta > div p,
+body .oferta > div ol li,
+body .oferta > div ul li {
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+body .oferta > div ol li,
+body .oferta > div ul li {
+    margin: 0px 0px 0px 30px;
+    padding: 0px 0px 20px 10px;
+}
+
+body .oferta .tabla {
+    width: 100%;
+    overflow: auto;
+}
+
+body .oferta .tabla table {
+    width: 100%;
+}
+
+body .oferta .tabla table thead,
+body .oferta .tabla table tbody {
+    width: 100%;
+}
+
+body .oferta .tabla table thead tr,
+body .oferta .tabla table tbody tr {
+    width: 100%;
+}
+
+body .oferta .tabla table tbody tr:hover td {
+    background-color: transparent;
+}
+
+body .oferta .tabla table tbody tr:hover .bg-green p {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+body .oferta .tabla table thead tr th,
+body .oferta .tabla table tbody tr td {
+    max-width: 11%;
+    min-width: 11%;
+    width: 11%;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+body .oferta  .tabla table tbody tr td {
+    background-color: #B9F2C8;
+    transition: all .3s;
+}
+
+body .oferta .tabla table tbody tr .td:hover {
+    background-color: var(--principal);
+}
+
+body .oferta .tabla table tbody tr .td:hover .asig p {
+    color: white;
+}
+
+body .oferta .tabla table tbody tr td .asig {
+    max-width: 100%;
+}
+
+body .oferta .tabla table tbody tr .bg-green {
+    background-color: #05A678;
+}
+
+
+body .oferta .tabla table tbody tr .asig-vacio {
+    background-color: transparent;
+}
+
+body .oferta .tabla table tbody tr td div p {
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: 600;
+    cursor: default;
+}
+
+body .oferta .tabla table tbody tr .bg-green div p {
+    color: white;
+}
+
+body .oferta .tabla table tbody tr td div .hora {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 0px 0px;
+}
+
+body .oferta .tabla table tbody tr td div .hora p {
+    padding: 5px;
+}
+
+@media screen and (max-width: 1366px) {
+    body .oferta > div {
+        width: 80%;
+    }
+    
+    body .oferta .reticula {
+        width: 80%;
+    }
+
+    body header .nombre_carrera .nombre {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body header .nombre_carrera .nombre h1 {
+        color: var(--fondo);
+        text-align: left;
+        font-size: 2em;
+    }
+
+    body .oferta > div {
+        width: 90%;
+    }
+
+    body .oferta .tabla {
+        width: 100%;
+    }
+
+    body .oferta .reticula {
+        width: 90%;
+    }
+}
