@@ -14,6 +14,12 @@ window.addEventListener('scroll', (evt) => {
             card[i].classList.remove('card-show');
         }
     }
+
+    if (window.innerHeight + window.scrollY === document.body.clientHeight) {
+        card[i].classList.add('card-show');
+    } else {
+        card[i].classList.remove('card-show');
+    }
 });
 
 if (document.getElementsByClassName('btn-menu-icon')) {
