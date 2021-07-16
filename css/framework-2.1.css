@@ -472,6 +472,10 @@ ul, ol {
     background-color: var(--color-blue);    
 }
 
+.btn-blue:hover {
+    background-color: var(--color-blue-hover);
+}
+
 .btn-blue-hover:hover {
     color: white;
     background-color: var(--color-blue);
