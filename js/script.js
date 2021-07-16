@@ -1,6 +1,8 @@
 window.addEventListener('scroll', (evt) => {
     const nav = document.getElementsByClassName('nav');
     const card = document.getElementsByClassName('card');
+    const proyect = document.getElementsByClassName('proyect');
+
     if (window.scrollY > 10) {
         nav[0].classList.add('bg-aux');
     } else {
@@ -14,14 +16,29 @@ window.addEventListener('scroll', (evt) => {
             card[i].classList.remove('card-show');
         }
     }
+    
+    for (let i = 0; i < proyect.length; i++) {
+        if (window.pageYOffset >= (proyect[i].offsetTop - (window.innerHeight/2))) {
+            proyect[i].classList.add('proyect-show');
+        } else {
+            proyect[i].classList.remove('proyect-show');
+        }
+    }
 
     if (window.innerHeight + window.scrollY >= document.body.clientHeight/2) {
-        const card_show = document.getElementsByClassName('card');
-        for (let i = 0; i < card_show.length; i++) {
-            if (window.pageYOffset >= (card_show[i].offsetTop - (window.innerHeight))) {
-                card_show[i].classList.add('card-show');
+        for (let i = 0; i < card.length; i++) {
+            if (window.pageYOffset >= (card[i].offsetTop - (window.innerHeight))) {
+                card[i].classList.add('card-show');
             } else {
-                card_show[i].classList.remove('card-show');
+                card[i].classList.remove('card-show');
+            }
+        }
+        
+        for (let i = 0; i < proyect.length; i++) {
+            if (window.pageYOffset >= (proyect[i].offsetTop - (window.innerHeight))) {
+                proyect[i].classList.add('proyect-show');
+            } else {
+                proyect[i].classList.remove('proyect-show');
             }
         }
     } 
