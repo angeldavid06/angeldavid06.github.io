@@ -16,9 +16,9 @@ window.addEventListener('scroll', (evt) => {
     }
 
     if (window.innerHeight + window.scrollY === document.body.clientHeight) {
-        card[i].classList.add('card-show');
+        card[card.length-1].classList.add('card-show');
     } else {
-        card[i].classList.remove('card-show');
+        card[card.length-1].classList.remove('card-show');
     }
 });
 
