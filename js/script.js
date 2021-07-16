@@ -16,6 +16,8 @@ window.addEventListener('scroll', (evt) => {
     }
 
     if (window.innerHeight + window.scrollY === document.body.clientHeight) {
+        alert(window.innerHeight + window.scrollY);
+        alert(document.body.clientHeight);
         card[card.length-1].classList.add('card-show');
     } else {
         card[card.length-1].classList.remove('card-show');
