@@ -649,6 +649,10 @@ img, svg {
         min-width: 100%;
     }
 
+    .nav {
+        overflow: visible;
+    }
+
     .nav .btn-menu {
         width: 100%;
         text-align: right;

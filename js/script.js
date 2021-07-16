@@ -8,7 +8,7 @@ window.addEventListener('scroll', (evt) => {
     }
 
     for (let i = 0; i < card.length; i++) {
-        if (window.pageYOffset >= (card[i].offsetTop - 600)) {
+        if (window.pageYOffset >= (card[i].offsetTop - (window.innerHeight/2))) {
             card[i].classList.add('card-show');
         } else {
             card[i].classList.remove('card-show');
@@ -16,8 +16,6 @@ window.addEventListener('scroll', (evt) => {
     }
 
     if (window.innerHeight + window.scrollY === document.body.clientHeight) {
-        alert(window.innerHeight + window.scrollY);
-        alert(document.body.clientHeight);
         card[card.length-1].classList.add('card-show');
     } else {
         card[card.length-1].classList.remove('card-show');
