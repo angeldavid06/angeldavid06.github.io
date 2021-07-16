@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     z-index: inherit;
-    background: linear-gradient(to right, rgba(61, 111, 177, 1), rgba(61, 111, 177, 0.5));
+    background: linear-gradient(to right, rgba(61, 111, 177, 1), rgba(48, 94, 153, 0.6));
 }
 
 .main h1 {
@@ -29,7 +29,7 @@
     min-height: 300px;
     max-height: 300px;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     position: relative;
     left: 200px;
     opacity: 0;
@@ -69,9 +69,14 @@
 }
 
 .card-2 {
-    max-width: 45%;
-    min-width: 45%;
+    max-width: 47.5%;
+    min-width: 47.5%;
+    margin: 0px 4% 2.5% 0px;
 }
+
+.card-2:nth-child(2n) {
+    margin: 0px 0% 2.5% 0px;
+} 
 
 .card-2 .icon {
     max-width: 30px;
@@ -153,6 +158,18 @@
     background-position: center;
 }
 
+.card .image-vscode {
+    background-image: url(../img/450_1000.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-netbeans {
+    background-image: url(../img/bg-NetBeans.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .card .image-java {
     background-image: url(../img/bg-java.jpg);
     background-size: cover;
@@ -183,6 +200,21 @@
 .proyect-show {
     left: 0px;
     opacity: 1;
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(24, 55, 95, 0.8);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal-show {
+    position: fixed;
+    display: block;
 }
 
 @media screen and (max-width: 768px) {
