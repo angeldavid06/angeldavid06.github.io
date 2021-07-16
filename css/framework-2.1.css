@@ -640,6 +640,7 @@ img, svg {
     .row-con {
         width: 90%;
         max-width: 90%;
+        overflow-x: hidden;
     }
 
     .con-w12, .con-w11, .con-w10, .con-w9, .con-w8, .con-w7, .con-w6, .con-w5, .con-w4, .con-w3, .con-w2 {
