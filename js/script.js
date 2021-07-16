@@ -15,11 +15,16 @@ window.addEventListener('scroll', (evt) => {
         }
     }
 
-    if (window.innerHeight + window.scrollY === document.body.clientHeight) {
-        card[card.length-1].classList.add('card-show');
-    } else {
-        card[card.length-1].classList.remove('card-show');
-    }
+    if (window.innerHeight + window.scrollY >= document.body.clientHeight/2) {
+        const card_show = document.getElementsByClassName('card');
+        for (let i = 0; i < card_show.length; i++) {
+            if (window.pageYOffset >= (card_show[i].offsetTop - (window.innerHeight))) {
+                card_show[i].classList.add('card-show');
+            } else {
+                card_show[i].classList.remove('card-show');
+            }
+        }
+    } 
 });
 
 if (document.getElementsByClassName('btn-menu-icon')) {
