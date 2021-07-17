@@ -5,6 +5,27 @@
     background-position: bottom;
 }
 
+.main .foto {
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+    height: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    background-color: white;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.main .nombre {
+    padding: 0px 0px 0px 50px;
+}
+
+.proyects-main {
+    background-image: url('../img/Web\ 1920\ –\ 1.jpg');
+    background-position: center;
+}
+
 .main::before {
     content: '';
     position: absolute;
@@ -218,6 +239,28 @@
 }
 
 @media screen and (max-width: 768px) {
+    .main {
+        min-height: 100vh;
+        max-height: 100vh;
+        height: 100vh;
+    }
+
+    .main .foto {
+        margin: auto;
+        width: 200px;
+        max-width: 200px;
+        min-width: 200px;
+        height: 200px;
+        max-height: 200px;
+        min-height: 200px;
+    }
+
+    .main .nombre {
+        padding: 30px 0px;
+        text-align: center;
+        margin: auto;
+    }
+
     .card {
         min-width: 100%;
         max-width: 100%;

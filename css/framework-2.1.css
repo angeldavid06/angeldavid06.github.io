@@ -12,7 +12,7 @@ body {
 */
 :root {
     --shadow: ;
-    --radius: 5px;
+    --radius: 10px;
 
     --color-red: #DE4132;
     --color-yellow: #EDB303;
