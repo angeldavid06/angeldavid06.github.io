@@ -332,11 +332,12 @@ body {
     height: 100%;
     background-color: transparent;
     border-radius: 0;
+    background-color: var(--background-aux-03);
     color: white;
 }
 
 .carousel .carousel-btn:hover {
-    background-color: var(--background-aux-03);
+    background-color: var(--background-aux);
 }
 
 .carousel #carousel-previus {
