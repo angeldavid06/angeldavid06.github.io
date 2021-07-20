@@ -325,27 +325,17 @@ body {
     overflow: hidden;
 }
 
-.carousel .carousel-btn {
-    position: absolute;
+.carousel-btn {
     margin: 0;
     top: 0;
-    height: 100%;
     background-color: transparent;
     border-radius: 0;
     background-color: var(--background-aux-03);
     color: white;
 }
 
-.carousel .carousel-btn:hover {
+.carousel-btn:hover {
     background-color: var(--background-aux);
-}
-
-.carousel #carousel-previus {
-    left: 0;
-}
-
-.carousel #carousel-next {
-    right: 0%;
 }
 
 .carousel #container-images {
