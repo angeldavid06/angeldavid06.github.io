@@ -3,6 +3,7 @@
     background-image: url('../img/background-main.jpg');
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
 }
 
 .main .foto {
@@ -34,7 +35,7 @@
     width: 100%;
     height: 100%;
     z-index: inherit;
-    background: linear-gradient(to right, rgba(61, 111, 177, 1), rgba(48, 94, 153, 0.6));
+    background: linear-gradient(to right, rgb(47, 85, 134), rgba(26, 66, 117, 0.6));
 }
 
 .main h1 {
@@ -221,6 +222,10 @@
 .proyect-show {
     left: 0px;
     opacity: 1;
+}
+
+.proyect .img {
+    cursor: pointer;
 }
 
 .modal {
