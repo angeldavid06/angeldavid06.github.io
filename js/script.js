@@ -97,6 +97,15 @@ const route_images_pixki = [
     'proyects/pixki_4.PNG'
 ];
 
+const route_images_java = [
+    'proyects/java_1.PNG',
+    'proyects/java_2.PNG',
+    'proyects/java_3.PNG',
+    'proyects/java_4.PNG',
+    'proyects/java_5.PNG',
+    'proyects/java_6.PNG'
+];
+
 const vaciarModal = () => {
     const container = document.getElementById('container-images');
     while (container.firstChild) {
@@ -119,6 +128,8 @@ document.addEventListener('click', (evt) => {
             render_images(route_images_citapp);
         } else if (evt.target.dataset.img == 'pixki') {
             render_images(route_images_pixki);
+        } else if (evt.target.dataset.img == 'java') {
+            render_images(route_images_java);
         }
     }
 });
