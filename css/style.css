@@ -56,7 +56,7 @@
 html,
 .information {
     scroll-behavior: smooth;
-    scroll-padding: 100px;
+    scroll-padding: 50px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -539,7 +539,7 @@ body {
 
     .information {
         width: 100%;
-        padding: 20px 20px 20px 20px;
+        padding: 50px 20px 20px 20px;
         max-height: inherit;
         overflow-y: auto;
     }
