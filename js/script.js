@@ -17,22 +17,10 @@ const add_class = (el) => {
     item.classList.add('active');
 }
 
-const search_section = (el) => {
-    const section = document.getElementById(el);
-    const info = document.getElementsByClassName("information");
-    console.log(section.offsetTop);
-    info[0].scroll({
-        top: section.offsetTop,
-        left: 0,
-        behavior: 'smooth'
-    });
-}
-
 document.addEventListener('click', (evt) => {
     if (evt.target.dataset.nav) {
         remove_class();
         add_class(evt.target.dataset.nav);
-        search_section(evt.target.dataset.nav);
     }
 });
 
