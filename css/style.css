@@ -282,7 +282,13 @@ body {
 }
 
 .information .proyect .info {
-    padding: 0px 15px 0px 0px;
+    text-align: justify;
+    padding: 0px 20px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .information .proyect .info a {
