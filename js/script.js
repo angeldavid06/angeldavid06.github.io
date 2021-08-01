@@ -20,10 +20,12 @@ const add_class = (el) => {
 const search_section = (el) => {
     const section = document.getElementById(el);
     const info = document.getElementsByClassName("information");
-    info[0].scrollTo({
-        behavior:"smooth",
-        top:0,
-    })
+    console.log(section.offsetTop);
+    info[0].scroll({
+        top: section.offsetTop,
+        left: 0,
+        behavior: 'smooth'
+    });
 }
 
 document.addEventListener('click', (evt) => {
