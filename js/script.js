@@ -1,55 +1,35 @@
-window.addEventListener('scroll', (evt) => {
-    const nav = document.getElementsByClassName('nav');
-    const card = document.getElementsByClassName('card');
-    const proyect = document.getElementsByClassName('proyect');
+const remove_class = () => {
+    const el = [
+        "item-sobre",
+        "item-formacion",
+        "item-habilidades",
+        "item-proyectos"
+    ];
 
-    if (window.scrollY > 10) {
-        nav[0].classList.add('bg-aux');
-    } else {
-        nav[0].classList.remove('bg-aux');
+    for (let i = 0; i < el.length; i++) {
+        const item = document.getElementById(el[i]);
+        item.classList.remove('active')
     }
+}
 
-    for (let i = 0; i < card.length; i++) {
-        if (window.pageYOffset >= (card[i].offsetTop - (window.innerHeight/2))) {
-            card[i].classList.add('card-show');
-        } else {
-            card[i].classList.remove('card-show');
-        }
-    }
-    
-    for (let i = 0; i < proyect.length; i++) {
-        if (window.pageYOffset >= (proyect[i].offsetTop - (window.innerHeight/2))) {
-            proyect[i].classList.add('proyect-show');
-        } else {
-            proyect[i].classList.remove('proyect-show');
-        }
-    }
+const add_class = (el) => {
+    const item = document.getElementById('item-'+el);
+    item.classList.add('active');
+}
 
-    if (window.innerHeight + window.scrollY >= document.body.clientHeight/2) {
-        for (let i = 0; i < card.length; i++) {
-            if (window.pageYOffset >= (card[i].offsetTop - (window.innerHeight))) {
-                card[i].classList.add('card-show');
-            } else {
-                card[i].classList.remove('card-show');
-            }
-        }
-        
-        for (let i = 0; i < proyect.length; i++) {
-            if (window.pageYOffset >= (proyect[i].offsetTop - (window.innerHeight))) {
-                proyect[i].classList.add('proyect-show');
-            } else {
-                proyect[i].classList.remove('proyect-show');
-            }
-        }
-    } 
+document.addEventListener('click', (evt) => {
+    if (evt.target.dataset.nav) {
+        remove_class();
+        add_class(evt.target.dataset.nav);
+    }
 });
 
-if (document.getElementsByClassName('btn-menu-icon')) {
-    const menu_icon = document.getElementsByClassName('btn-menu-icon');
+
+if (document.getElementsByClassName('btn-menu')) {
+    const menu_icon = document.getElementsByClassName('btn-menu');
     menu_icon[0].addEventListener('click', () => {
-        const nav = document.getElementsByClassName('nav');
-        const nav_items = document.getElementsByClassName('nav-items');
-        nav_items[0].classList.toggle('nav-items-show');
+        const nav = document.getElementsByTagName('nav');
+        nav[0].classList.toggle('open-menu')
     });
 }
 
