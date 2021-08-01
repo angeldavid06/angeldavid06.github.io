@@ -53,10 +53,11 @@
     box-sizing: border-box;
 }
 
-/* .information {
+html,
+.information {
     scroll-behavior:auto;
     scroll-padding: 70px;
-} */
+}
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Oswald', sans-serif;
