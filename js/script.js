@@ -41,6 +41,16 @@ if (document.getElementsByClassName('close-modal')) {
     });
 }
 
+const route_images_produccion = [
+    'proyects/fmtor/login -1.PNG',
+    'proyects/fmtor/produccion/Menu Principal.PNG',
+    'proyects/fmtor/produccion/ordenes - 0.PNG',
+    'proyects/fmtor/produccion/control - 4.PNG',
+    'proyects/fmtor/produccion/diario - 2.PNG',
+    'proyects/fmtor/produccion/estados - 1.PNG',
+    'proyects/fmtor/produccion/Maquinas - 2.PNG',
+];
+
 const route_images_itt = [
     'proyects/oferta_academica.PNG',
     'proyects/oferta_academica_2.PNG',
@@ -97,7 +107,9 @@ document.addEventListener('click', (evt) => {
     if (evt.target.matches('img')) {
         const modal = document.getElementsByClassName('modal');
         modal[0].classList.add('modal-show');
-        if (evt.target.dataset.img == 'oferta') {
+        if (evt.target.dataset.img == "produccion") {
+          render_images(route_images_produccion);
+        } else if (evt.target.dataset.img == 'oferta') {
             render_images(route_images_itt);
         } else if (evt.target.dataset.img == 'vestidos') {
             render_images(route_images_vestidos);
