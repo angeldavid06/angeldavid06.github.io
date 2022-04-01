@@ -2,6 +2,7 @@ const remove_class = () => {
     const el = [
         "item-sobre",
         "item-formacion",
+        "item-experiencia",
         "item-habilidades",
         "item-proyectos"
     ];
