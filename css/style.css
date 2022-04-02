@@ -90,7 +90,7 @@ body {
 }
 
 .menu {
-    padding: 60px;
+    padding: 40px;
     background-color: var(--background-menu);
     overflow-y: auto;
     max-height: 100vh;
@@ -110,7 +110,7 @@ body {
     color: white;
     font-weight: 300;
     font-size: 2em;
-    padding: 30px 0px 30px 0px;
+    padding: 20px 0px 20px 0px;
 }
 
 .information h1 {
@@ -166,6 +166,10 @@ body {
     padding: 15px 0px;
 }
 
+.menu nav {
+    padding: 0px 0px 15px 0px;
+}
+
 .menu a {
     display: flex;
     align-items: center;
@@ -211,6 +215,10 @@ body {
 
 .information section {
     padding: 30px 0px 10px 0px;
+}
+
+.information section:first-child {
+    padding: 0px 0px 10px 0px;
 }
 
 .information .card {
@@ -374,6 +382,11 @@ body {
 
 .btn-icon-self {
     padding: 10px;
+    border-radius: 50%;
+}
+
+.btn-icon-self:hover {
+    border-radius: 5px;
 }
 
 .btn-gray {
@@ -450,13 +463,14 @@ body {
 }
 
 .modal {
+    display: none;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     z-index: 999;
-    top: 0;
     background-color: rgba(35, 35, 35,0.95);
-    left: 0;
-    display: none;
+    padding: 0px 10px;
 }
 
 .modal-show {
@@ -501,7 +515,7 @@ body {
         position: fixed;
         display: flex;
         z-index: 1;
-        left: 20px;
+        right: 20px;
         top: 20px;
         margin: 0;
     }
@@ -524,17 +538,17 @@ body {
 
     .menu nav {
         bottom: -1000px;
-        left: 0%;
         position: fixed;
-        width: 100%;
+        width: 95%;
+        left: 2.5%;
         background-color: var(--background-menu);
         padding: 20px 20px 40px 20px;
-        border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-        transition: all .4s;
+        border-radius: var(--border-radius);
+        transition: all .6s ease-in-out;
     }
 
     .menu .open-menu {
-        bottom: 0px;
+        bottom: 2.5%;
     }
 
     .information {
@@ -542,6 +556,10 @@ body {
         padding: 50px 20px 20px 20px;
         max-height: inherit;
         overflow-y: auto;
+    }
+
+    .information section:first-child {
+        padding: 0px 0px 10px 0px;
     }
 
     .information .contact {
@@ -572,7 +590,7 @@ body {
 
     .information .tecnologias {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
 
