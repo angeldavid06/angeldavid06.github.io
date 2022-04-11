@@ -45,11 +45,11 @@ if (document.getElementsByClassName('close-modal')) {
 const route_images_produccion = [
     'proyects/fmtor/login -1.PNG',
     'proyects/fmtor/produccion/Menu Principal.PNG',
-    'proyects/fmtor/produccion/ordenes - 0.PNG',
-    'proyects/fmtor/produccion/control - 4.PNG',
-    'proyects/fmtor/produccion/diario - 2.PNG',
-    'proyects/fmtor/produccion/estados - 1.PNG',
-    'proyects/fmtor/produccion/Maquinas - 2.PNG',
+    'proyects/fmtor/produccion/fmtor-0.PNG',
+    'proyects/fmtor/produccion/fmtor-1.PNG',
+    'proyects/fmtor/produccion/fmtor-2.PNG',
+    'proyects/fmtor/produccion/fmtor-3.PNG',
+    'proyects/fmtor/produccion/fmtor-4.PNG',
 ];
 
 const route_images_itt = [
