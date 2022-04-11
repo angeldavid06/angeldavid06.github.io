@@ -44,12 +44,12 @@ if (document.getElementsByClassName('close-modal')) {
 
 const route_images_produccion = [
     'proyects/fmtor/login -1.PNG',
-    'proyects/fmtor/produccion/Menu Principal.PNG',
-    'proyects/fmtor/produccion/fmtor-0.PNG',
-    'proyects/fmtor/produccion/fmtor-1.PNG',
-    'proyects/fmtor/produccion/fmtor-2.PNG',
-    'proyects/fmtor/produccion/fmtor-3.PNG',
-    'proyects/fmtor/produccion/fmtor-4.PNG',
+    'proyects/fmtor/Menu Principal.PNG',
+    'proyects/fmtor/fmtor-0.PNG',
+    'proyects/fmtor/fmtor-1.PNG',
+    'proyects/fmtor/fmtor-2.PNG',
+    'proyects/fmtor/fmtor-3.PNG',
+    'proyects/fmtor/fmtor-4.PNG',
 ];
 
 const route_images_itt = [
