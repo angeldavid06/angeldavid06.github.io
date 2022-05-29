@@ -48,13 +48,14 @@ body {
     scroll-snap-type: y mandatory;
 }
 
-body::before {
+#rectangulo-1 {
     position: fixed;
     content: '';
     top: 0;
     width: 70%;
     height: 100vh;
     background-color: var(--primary);
+    transition: all 1s;
     animation-duration: 1s;
     animation-name: primary;
     z-index: -1;
@@ -69,13 +70,14 @@ body::before {
     }
 }
 
-body::after {
+#rectangulo-2 {
     position: fixed;
     content: '';
     top: 0;
     width: 10%;
     height: 100vh;
     background-color: var(--primary);
+    transition: all 1s;
     animation-duration: 1s;
     animation-name: second;
     z-index: -1;
@@ -155,6 +157,7 @@ section {
     max-width: 70%;
     margin: auto;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     align-content: center;
     align-items: center;
     min-height: 100vh;
@@ -180,8 +183,18 @@ section #titulo {
     flex-wrap: wrap;
 }
 
-section #titulo h1 {
+section #titulo .titulo {
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+section #titulo .titulo .tipo_formacion {
+    padding: 0px 0px 0px 10px;
+    max-height: 2.55em;
+    overflow-y: hidden;
 }
 
 section #titulo .opciones {
@@ -243,5 +256,51 @@ section #fotografia #btn_descargar_cv {
 
 section #fotografia #btn_descargar_cv i {
     padding: 0px 10px 0px 0px;
+    color: var(--secondary-text);
+}
+
+section .slider .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+}
+
+section .slider .contenedor .primario,
+section .slider .contenedor .secundario {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+section .slider .contenedor .primario,
+section .slider .contenedor .secundario .contenedor-foto {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+section .slider .contenedor .primario img,
+section .slider .contenedor .secundario .contenedor-foto img {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+section .slider .contenedor .secundario .opciones-slider {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+section .slider .contenedor .secundario .opciones-slider button {
+    background-color: var(--primary-light);
+    color: var(--primary-text);
+    border: none;
+    border-radius: var(--btn-radius);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+section .slider .contenedor .secundario .opciones-slider button:hover {
+    background-color: var(--secondary);
     color: var(--secondary-text);
 }

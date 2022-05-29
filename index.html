@@ -13,6 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
+    <div id="rectangulo-1"></div>
+    <div id="rectangulo-2"></div>
     <menu>
         <i class="material-symbols-rounded btn" data-menu="true">menu</i>
         <nav id="menu">
@@ -43,22 +45,52 @@
         </div>
     </section>
     <section id="formacion">
-        <div id="titulo">
-            <h1>Formación Académica</h1>
-            <div class="opciones">
-                <div class="opcion active" data-opcion="formacion" title="Formación Académica" data-numeroOpcion="1"></div>
-                <div class="opcion" data-opcion="formacion" title="Formación Complementaria" data-numeroOpcion="2"></div>
+        <div class="descripcion-seccion">
+            <div id="titulo">
+                <div class="titulo">
+                    <h1>Formación</h1>
+                    <div class="tipo_formacion">
+                        <div class="tipo">
+                            <h1>Académica</h1>
+                        </div>
+                        <div class="tipo">
+                            <h1>Complementaria</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="opciones opciones-formacion">
+                    <div class="opcion opcion-0 active" data-tipo="formacion" data-opcion="0"></div>
+                    <div class="opcion opcion-1" data-tipo="formacion" data-opcion="1"></div>
+                </div>
+            </div>
+            <div id="descripcion_formacion">
+                <p class="p-titulo">Escuela</p>
+                <p>Instituto Tecnológico de Tláhuac</p>
+                <p class="p-titulo">Carrera</p>
+                <p>Ing. en Sistemas Computacionales</p>
+                <p class="p-titulo">Generación</p>
+                <p>2017 - 2021</p>
             </div>
         </div>
-        <div id="descripcion_formacion">
-            <p class="p-titulo">Escuela</p>
-            <p>Instituto Tecnológico de Tláhuac</p>
-            <p class="p-titulo">Carrera</p>
-            <p>Ing. en Sistemas Computacionales</p>
-            <p class="p-titulo">Generación</p>
-            <p>2017 - 2021</p>
+        <div class="slider">
+            <div class="contenedor">
+                <div class="primario">
+                    <img src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">
+                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="" srcset="">
+                </div>
+                <div class="secundario">
+                    <div class="contenedor-foto">
+                        <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="" srcset="">
+                        <img src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">
+                    </div>
+                    <div class="opciones-slider">
+                        <button>Anterior</button>
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <script src="js/script.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
 </body>
 </html>
