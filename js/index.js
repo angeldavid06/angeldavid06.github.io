@@ -1,6 +1,7 @@
 import { active_menu } from "/modules/menu.js";
 import { mover_rectangulos } from "/modules/scroll.js";
 import { cambiar_tipo_titulo } from "/modules/opciones_titulos.js";
+import { slider } from "/modules/slider.js";
 
 const d = document;
 
@@ -14,6 +15,8 @@ d.addEventListener('click', (evt) => {
           elemento.dataset.tipo,
           elemento.dataset.opcion
         );
+    } else if (elemento.dataset.slider) {
+        slider(elemento.dataset.slider);
     }
 })
 

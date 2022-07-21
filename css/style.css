@@ -197,6 +197,17 @@ section #titulo .titulo .tipo_formacion {
     overflow-y: hidden;
 }
 
+section #descripcion {
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+section #descripcion .contenedor_descripcion {
+    min-width: 100%;
+}
+
 section #titulo .opciones {
     display: flex;
     justify-content: flex-start;
@@ -264,14 +275,20 @@ section .slider .contenedor {
     grid-template-columns: 1fr 0.7fr;
 }
 
-section .slider .contenedor .primario,
-section .slider .contenedor .secundario {
-    max-width: 100%;
-    overflow: hidden;
+section .slider .contenedor .primario {
+    min-height: 405px;
+    max-height: 405px;
+}
+
+section .slider .contenedor .secundario .contenedor-foto {
+    min-height: 282px;
+    max-height: 282px;
 }
 
 section .slider .contenedor .primario,
 section .slider .contenedor .secundario .contenedor-foto {
+    max-width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -281,8 +298,17 @@ section .slider .contenedor .secundario .contenedor-foto {
 section .slider .contenedor .primario img,
 section .slider .contenedor .secundario .contenedor-foto img {
     max-width: 100%;
-    padding: 10px;
+    padding: 30px;
     border-radius: var(--border-radius);
+    opacity: 0.5;
+    transition: all .5s;
+}
+
+section .slider .contenedor .primario img.active,
+section .slider .contenedor .secundario .contenedor-foto img.active {
+    max-width: 100%;
+    padding: 10px;
+    opacity: 1;
 }
 
 section .slider .contenedor .secundario .opciones-slider {

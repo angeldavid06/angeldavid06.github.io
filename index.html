@@ -26,7 +26,7 @@
         </nav>
     </menu>
     <section id="main">
-        <div id="descripcion">
+        <div id="descripcion-cv">
             <p>Hola mi nombre es <code>Angel David</code></p>
             <br>
             <br>
@@ -63,29 +63,41 @@
                     <div class="opcion opcion-1" data-tipo="formacion" data-opcion="1"></div>
                 </div>
             </div>
-            <div id="descripcion_formacion">
-                <p class="p-titulo">Escuela</p>
-                <p>Instituto Tecnológico de Tláhuac</p>
-                <p class="p-titulo">Carrera</p>
-                <p>Ing. en Sistemas Computacionales</p>
-                <p class="p-titulo">Generación</p>
-                <p>2017 - 2021</p>
+            <div id="descripcion">
+                <div id="descripcion_1" class="contenedor_descripcion">
+                    <p class="p-titulo">Escuela</p>
+                    <p>Instituto Tecnológico de Tláhuac</p>
+                    <p class="p-titulo">Carrera</p>
+                    <p>Ing. en Sistemas Computacionales</p>
+                    <p class="p-titulo">Generación</p>
+                    <p>2017 - 2021</p>
+                </div>
+                <div id="descripcion_2" class="contenedor_descripcion">
+                    <p class="p-titulo">Escuela</p>
+                    <p>Instituto Tecnológico de Tláhuac 12121</p>
+                    <p class="p-titulo">Carrera</p>
+                    <p>Ing. en Sistemas Computacionales 12121</p>
+                    <p class="p-titulo">Generación</p>
+                    <p>2017 - 2021 12121</p>
+                </div>
             </div>
         </div>
         <div class="slider">
-            <div class="contenedor">
+            <div id="slider-1" class="contenedor">
                 <div class="primario">
-                    <img src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">
-                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="" srcset="">
+                    <img id="actual-1" data-principal="1" class="active" src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">
+                    <img id="actual-2" data-principal="2" src="https://cdn.pixabay.com/photo/2022/05/30/14/24/stairs-7231312_960_720.jpg" alt="" srcset="">
+                    <img id="actual-3" data-principal="3" src="https://cdn.pixabay.com/photo/2021/07/11/12/02/lavender-6403599_960_720.jpg" alt="" srcset="">
                 </div>
                 <div class="secundario">
                     <div class="contenedor-foto">
-                        <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="" srcset="">
-                        <img src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">
+                        <img id="prev-1" data-secundario="1" class="active" src="https://cdn.pixabay.com/photo/2022/05/30/14/24/stairs-7231312_960_720.jpg" alt="" srcset="">
+                        <img id="prev-2" data-secundario="2" src="https://cdn.pixabay.com/photo/2021/07/11/12/02/lavender-6403599_960_720.jpg" alt="" srcset="">
+                        <img id="prev-3" data-secundario="3" src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">
                     </div>
                     <div class="opciones-slider">
-                        <button>Anterior</button>
-                        <button>Siguiente</button>
+                        <!-- <button data-slider="1" data-anterior="true">Anterior</button> -->
+                        <button data-slider="1" data-siguiente="true">Siguiente</button>
                     </div>
                 </div>
             </div>
