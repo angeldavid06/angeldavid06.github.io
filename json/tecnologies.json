@@ -1,0 +1,28 @@
+{
+    "languages" : [
+        "HTML",
+        "CSS",
+        "SQL"
+    ],
+    "programming" : [
+        "JavaScript",
+        "PHP",
+        "Java"    
+    ],
+    "office" : [
+        "Microsoft Office"
+    ],
+    "ui_ux" : [
+        "Figma",
+        "Adobe Xd",
+        "Adobe Illustrator"
+    ],
+    "others" : [
+        "Git",
+        "VScode",
+        "Apache NetBeans",
+        "Maria DB",
+        "MySQL",
+        "Laravel"
+    ]
+}

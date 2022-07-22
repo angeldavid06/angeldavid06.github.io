@@ -1,11 +1,17 @@
-import { active_menu } from "/modules/menu.js";
-import { mover_rectangulos } from "/modules/scroll.js";
-import { cambiar_tipo_titulo } from "/modules/opciones_titulos.js";
-import { slider } from "/modules/slider.js";
+import { APP, fetchAPI } from "../modules/env.js";
+import { active_menu } from "../modules/menu.js";
+import { mover_rectangulos } from "../modules/scroll.js";
+import { cambiar_tipo_titulo } from "../modules/opciones_titulos.js";
+import { slider } from "../modules/slider.js";
 
-const d = document;
+APP.D.addEventListener('DOMContentLoaded', () => {
+    const res = fetchAPI(APP.URL_HOST + 'json/personal.json')
+    res.then(json => {
+        console.log(json);
+    })
+})
 
-d.addEventListener('click', (evt) => {
+APP.D.addEventListener('click', (evt) => {
     const elemento = evt.target; 
     if (elemento.dataset.menu) {
         elemento.classList.toggle('active');
@@ -20,6 +26,6 @@ d.addEventListener('click', (evt) => {
     }
 })
 
-d.addEventListener('scroll', (evt) => {
+APP.D.addEventListener('scroll', (evt) => {
     mover_rectangulos(window.pageYOffset);
 })

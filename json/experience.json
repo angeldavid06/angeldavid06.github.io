@@ -2,11 +2,17 @@
     {
         "empresa" : "Softtek",
         "puesto" : "Digital Engineer",
-        "periodo" : "Mayo 2022 - Actual"
+        "periodo" : "Mayo 2022 - Actual",
+        "activities" : [
+            
+        ]
     },
     {
         "empresa" : "Forjadora Mexicana de Tornillos, S.A. de C.V.",
         "puesto" : "Gerente de Sistemas",
-        "periodo" : "Febrero 2022 - Mayo 2022"
+        "periodo" : "Febrero 2022 - Mayo 2022",
+        "activities" : [
+            "Desarrollo de sistemas de interfaz entre producción, ventas y almacén"
+        ]
     }
 ]
