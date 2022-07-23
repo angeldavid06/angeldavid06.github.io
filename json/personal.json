@@ -1,32 +1,90 @@
 {
-    "name" : "Angel David",
-    "last_name" : "Martinez Mendoza",
-    "about_me" : "Desde que comencé el bachillerato en la carrera de Programación en el año 2014, disfruto llevar a cabo la maquetación e interactividad de interfaces web, para el buen posicionamiento y el rendimiento de sitios y aplicaciones web. Actualmente me considero un desarrollador FullStack Jr. Soy tranquilamente confiado en mis conocimientos, naturalmente curioso y trabajo constantemente en mejorar mis habilidades.",
-    "contact" : {
-        "email" : "angel.david.mtz.mdza(a)gmail.com",
-        "phone" : "55 6427 1307"
+    "personal" : {
+        "name" : "Angel David",
+        "last_name" : "Martinez Mendoza",
+        "about_me" : "Desde que comencé el bachillerato en la carrera de Programación en el año 2014, disfruto llevar a cabo la maquetación e interactividad de interfaces web, para el buen posicionamiento y el rendimiento de sitios y aplicaciones web. Actualmente me considero un desarrollador FullStack Jr. Soy tranquilamente confiado en mis conocimientos, naturalmente curioso y trabajo constantemente en mejorar mis habilidades.",
+        "contact" : {
+            "email" : "angel.david.mtz.mdza(a)gmail.com",
+            "phone" : "55 6427 1307"
+        },
+        "education" : {
+            "school" : [
+                {
+                    "career" : "Ingeniería en Sistemas Computacionales",
+                    "period" : "2017 - 2022",
+                    "school" : "Instituto Tecnológico de Tláhuac",
+                    "locaton" : "Alcaldía Tláhuac, Ciudad de México"
+                },
+                {
+                    "career" : "Técnico en Programación",
+                    "period" : "2014 - 2017",
+                    "school" : "Centro de Estudios Tecnológicos, industrial y de servicio No. 1",
+                    "locaton" : "Alcaldía Tláhuac, Ciudad de México"
+                }
+            ],
+            "courses" : [
+                {
+                    "course" : "Desarrollador de sitios web responsivos",
+                    "period" : "Octubre 2021",
+                    "institute" : "Capacítate para el empleo"
+                }
+            ]
+        }
     },
-    "education" : {
-        "school" : [
-            {
-                "career" : "Ingeniería en Sistemas Computacionales",
-                "period" : "2017 - 2022",
-                "school" : "Instituto Tecnológico de Tláhuac",
-                "locaton" : "Alcaldía Tláhuac, Ciudad de México"
-            },
-            {
-                "career" : "Técnico en Programación",
-                "period" : "2014 - 2017",
-                "school" : "Centro de Estudios Tecnológicos, industrial y de servicio No. 1",
-                "locaton" : "Alcaldía Tláhuac, Ciudad de México"
-            }
+    "experience" : [
+        {
+            "empresa" : "Softtek",
+            "puesto" : "Digital Engineer",
+            "periodo" : "Mayo 2022 - Actual",
+            "activities" : [
+                
+            ]
+        },
+        {
+            "empresa" : "Forjadora Mexicana de Tornillos, S.A. de C.V.",
+            "puesto" : "Gerente de Sistemas",
+            "periodo" : "Febrero 2022 - Mayo 2022",
+            "activities" : [
+                "Desarrollo de sistemas de interfaz entre producción, ventas y almacén"
+            ]
+        }
+    ],
+    "skills" : [
+        "Autodidacta",
+        "Trabajo en equipo",
+        "MVC",
+        "Programación Orientada a Objetos(POO)",
+        "Programación Web Front End",
+        "Programación Web Backend",
+        "Diseño y Maquetación Web",
+        "UI - UX"
+    ],
+    "tecnologies" : {
+        "languages" : [
+            "HTML",
+            "CSS",
+            "SQL"
         ],
-        "courses" : [
-            {
-                "course" : "Desarrollador de sitios web responsivos",
-                "period" : "Octubre 2021",
-                "institute" : "Capacítate para el empleo"
-            }
+        "programming" : [
+            "JavaScript",
+            "PHP",
+            "Java"    
+        ],
+        "office" : [
+            "Microsoft Office"
+        ],
+        "ui_ux" : [
+            "Figma",
+            "Adobe Xd",
+            "Adobe Illustrator"
+        ],
+        "others" : [
+            "Git",
+            "VScode",
+            "Apache NetBeans",
+            "Maria DB",
+            "MySQL",
+            "Laravel"
         ]
     }
 }

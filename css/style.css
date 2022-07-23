@@ -4,6 +4,8 @@
     --primary: #171817;
     --primary-light: #3D3E3D;
     --primary-dark: #0F0F0F;
+    --primary-dark-05: rgba(15, 15, 15, 0.5);
+
     --secondary: #F37C65;
     --secondary-light: #FFAD93;
     --secondary-dark: #BC4D3A;
