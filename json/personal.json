@@ -13,20 +13,23 @@
                     "career" : "Ingeniería en Sistemas Computacionales",
                     "period" : "2017 - 2022",
                     "school" : "Instituto Tecnológico de Tláhuac",
-                    "locaton" : "Alcaldía Tláhuac, Ciudad de México"
+                    "locaton" : "Alcaldía Tláhuac, Ciudad de México",
+                    "image" : "https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg"
                 },
                 {
                     "career" : "Técnico en Programación",
                     "period" : "2014 - 2017",
                     "school" : "Centro de Estudios Tecnológicos, industrial y de servicio No. 1",
-                    "locaton" : "Alcaldía Tláhuac, Ciudad de México"
+                    "locaton" : "Alcaldía Tláhuac, Ciudad de México",
+                    "image" : "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg"
                 }
             ],
             "courses" : [
                 {
                     "course" : "Desarrollador de sitios web responsivos",
                     "period" : "Octubre 2021",
-                    "institute" : "Capacítate para el empleo"
+                    "institute" : "Capacítate para el empleo",
+                    "image" : ""
                 }
             ]
         }

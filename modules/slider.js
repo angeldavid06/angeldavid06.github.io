@@ -1,9 +1,3 @@
-const url_img = [
-    "https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg"
-]
-
 const contenedor_slider = (id) => {
     const slider_principal = document.getElementById('slider-'+id);
     return slider_principal;

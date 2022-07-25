@@ -5,17 +5,21 @@ import { generate_formacion } from "../modules/render/formacion/generate_formaci
 
 export const render_app = (json) => {
     const fragment_app = APP.D.createDocumentFragment();
-    const fragment_elements = auxiliar_elements();
-    const fragment_menu = generate_menu();
-    const fragment_main = generate_main(json.personal);
-    const fragment_formacion = generate_formacion(json.personal.education);
+    const fragment_components = [
+        auxiliar_elements(),
+        generate_menu(APP.COMPONENTS.menu),
+        generate_main(APP.COMPONENTS.main,json.personal),
+        generate_formacion(APP.COMPONENTS.formacion,json.personal.education)
+    ];
+    
+    fragment_components.map(component => {
+        if (component != false) {
+            fragment_app.appendChild(component);
+        }
+    })
 
-    fragment_app.appendChild(fragment_menu);
-    fragment_app.appendChild(fragment_main);
-    fragment_app.appendChild(fragment_formacion);
-
-    APP.D.body.appendChild(fragment_elements);
     APP.D.body.appendChild(fragment_app);
+
     return true;
 }
 
