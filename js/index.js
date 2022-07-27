@@ -1,5 +1,5 @@
 import { APP } from "./env.js";
-import { fetchAPI } from "./json_request.js";
+import { execRequest } from "./json_request.js";
 import { render_app } from "./render.js";
 import { active_menu } from "../modules/menu.js";
 import { mover_rectangulos } from "../modules/scroll.js";
@@ -7,7 +7,7 @@ import { cambiar_tipo_titulo } from "../modules/opciones_titulos.js";
 import { slider } from "../modules/slider.js";
 
 APP.D.addEventListener('DOMContentLoaded', () => {
-    const res = fetchAPI(APP.URL_HOST + 'json/personal.json')
+    const res = execRequest(APP.URL_HOST + 'json/personal.json')
     res.then(json => {
         render_app(json);
     })

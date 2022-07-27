@@ -1,6 +1,6 @@
 import { APP } from "./env.js";
 
-export const fetchAPI = async (url) => {
+export const execRequest = async (url) => {
     generate_loader()
     await fetch(url)
     .then((res => res.ok ? res.json() : Promise.reject()))
@@ -21,7 +21,7 @@ export const fetchAPI = async (url) => {
 }
 
 const generate_loader = () => {
-    APP.D.innerHTML = '<div id="content-loader">'+
+    APP.D.body.innerHTML = '<div id="content-loader">'+
                             '<div id="loader"></div>'+
                         '</div>';
 }

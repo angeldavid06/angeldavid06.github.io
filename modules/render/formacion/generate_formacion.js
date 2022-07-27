@@ -36,7 +36,7 @@ const generate_titles = (education) => {
     let contador = 0;
     
     keys.map(title => {
-        (title == 'school' ? title = 'Academica' : title = 'Cursos'); 
+        (title == 'school' ? title = 'Académica' : title = 'Cursos'); 
         structure_string += '<div class="tipo">'+
                                 '<h1>'+title+'</h1>'+
                             '</div>';
@@ -85,26 +85,60 @@ const generate_courses = (courses) => {
 const generate_slider = (json) => {
     let structure_string = '<div class="slider">';
     let contador = 1;
+    let slide = 1;
+    let clase = '';
+    const urls = get_url_image(json.school);
 
-    structure_string += '<div id="slider-1" class="contenedor active">'+
-                            '<div class="primario">'+
-                                '<img id="actual-1" data-principal="1" class="active" src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">'+
-                                '<img id="actual-2" data-principal="2" src="https://cdn.pixabay.com/photo/2022/05/30/14/24/stairs-7231312_960_720.jpg" alt="" srcset="">'+
-                                '<img id="actual-3" data-principal="3" src="https://cdn.pixabay.com/photo/2021/07/11/12/02/lavender-6403599_960_720.jpg" alt="" srcset="">'+
-                            '</div>'+
-                            '<div class="secundario">'+
-                                '<div class="contenedor-foto">'+
-                                    '<img id="prev-1" data-secundario="1" class="active" src="https://cdn.pixabay.com/photo/2022/05/30/14/24/stairs-7231312_960_720.jpg" alt="" srcset="">'+
-                                    '<img id="prev-2" data-secundario="2" src="https://cdn.pixabay.com/photo/2021/07/11/12/02/lavender-6403599_960_720.jpg" alt="" srcset="">'+
-                                    '<img id="prev-3" data-secundario="3" src="https://cdn.pixabay.com/photo/2022/03/30/14/55/holiday-home-7101309_960_720.jpg" alt="" srcset="">'+
-                                '</div>'+
-                                '<div class="opciones-slider">'+
-                                    '<button class="material-symbols-rounded" data-slider="1" data-siguiente="true">arrow_forward_ios</button>'+
-                                '</div>'+
-                            '</div>'+
+    structure_string += '<div id="slider-1" class="contenedor active">';
+    structure_string += '<div class="primario">';
+
+    json.school.forEach(inf => {
+        (contador == 1 ? clase = 'active' : clase = '')
+        structure_string += '<img id="actual-'+contador+'" data-principal="'+contador+'" data-slide="'+slide+'" class="'+clase+'" src="'+inf.image+'" alt="" srcset="">';
+        contador++;
+        slide++;
+    });
+    slide = 1;
+    contador = 1;
+    structure_string += '</div>';
+    structure_string += '<div class="secundario">';
+    structure_string += '<div class="contenedor-foto">';
+    
+    urls.map(el => {
+        (contador == 1 ? clase = 'active' : clase = '')
+        structure_string += '<img id="prev-'+(contador)+'" data-secundario="'+(contador)+'" data-slide="'+slide+'" class="'+clase+'" src="'+el+'" alt="" srcset="">';
+        contador++;
+        slide++;
+    });
+
+    structure_string += '</div>'+
+                        '<div class="opciones-slider">'+
+                            '<button class="material-symbols-rounded" data-slider="1" data-siguiente="true">arrow_forward_ios</button>'+
+                        '</div>'+
+                        '</div>'+
+                        '</div>'+
                         '</div>';
 
-    structure_string += '</div>';
-
     return structure_string;
+}
+
+const get_url_image = (json) => {
+    const arr_url = [];
+    let contador = 1;
+
+    json.forEach(el => {
+        if (contador > 1) {
+            arr_url.push(el.image);
+        }
+        contador++;
+    })
+
+    json.forEach(el => {
+        if (contador > 1) {
+            arr_url.push(el.image);
+        }
+        contador = 1;
+    })
+
+    return arr_url;
 }

@@ -18,16 +18,18 @@ const slider_primario = (contenedor) => {
     const activo = elemento_actual(contenedor_slider_principal[0]);
     const cantidad_imgs = cantidad_elementos(contenedor_slider_principal[0]);
     let siguiente = parseInt(activo.dataset.principal) + 1;
+    let id = '';
 
-    if (activo.dataset.principal == cantidad_imgs){
+    if (activo.dataset.slide == cantidad_imgs){
         contenedor_slider_principal[0].scrollLeft = 0;
-        siguiente = 1;
+        siguiente -= cantidad_imgs;
     } else {
-        contenedor_slider_principal[0].scrollLeft =activo.clientWidth * activo.dataset.principal;
+        contenedor_slider_principal[0].scrollLeft = activo.clientWidth * activo.dataset.slide;
     }
-
+    
+    id = activo.getAttribute('id').split('-')[0] + '-' + siguiente;
     activo.classList.remove('active')
-    document.getElementById("actual-"+siguiente).classList.add('active');
+    document.getElementById(id).classList.add('active');
 }
 
 const slider_secundario = (contenedor) => {
@@ -36,16 +38,19 @@ const slider_secundario = (contenedor) => {
     const activo = elemento_actual(contenedor_imgs[0]);
     const cantidad_imgs = cantidad_elementos(contenedor_imgs[0]);
     let siguiente = parseInt(activo.dataset.secundario) + 1;
+    let id = '';
 
-    if (activo.dataset.secundario == cantidad_imgs){
+    if (activo.dataset.slide == cantidad_imgs){
         contenedor_imgs[0].scrollLeft = 0;
-        siguiente = 1;
+        console.log(siguiente);
+        siguiente -= (cantidad_imgs);
     } else {
-        contenedor_imgs[0].scrollLeft = activo.clientWidth * activo.dataset.secundario;
+        contenedor_imgs[0].scrollLeft = activo.clientWidth * activo.dataset.slide;
     }
-
+    
+    id = activo.getAttribute('id').split('-')[0] + '-' + siguiente;
     activo.classList.remove('active')
-    document.getElementById("prev-"+siguiente).classList.add('active');
+    document.getElementById(id).classList.add('active');
 }
 
 export const slider = (id) => {

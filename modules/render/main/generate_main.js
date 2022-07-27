@@ -6,7 +6,7 @@ export const generate_main = (status,json) => {
     
         tag_section.setAttribute('id','main')
         tag_section.innerHTML = '<div id="descripcion-cv">'+
-                                    '<p>Hola mi nombre es <code>'+json.name+'</code></p>'+
+                                    '<h3>Hola mi nombre es <code>'+json.name+'</code></h3>'+
                                     '<br>'+
                                     '<br>'+
                                     '<p>'+json.about_me+'</p>'+

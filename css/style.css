@@ -171,12 +171,19 @@ section#main {
 }
 
 section p {
+    line-height: 1.5em;
     color: var(--primary-text);
 }
 
 section h1 {
     color: var(--secondary);
     font-size: 2.1em;
+    font-weight: 500;
+}
+
+section h3 {
+    color: var(--primary-text);
+    font-size: 1.8em;
     font-weight: 500;
 }
 
@@ -285,6 +292,10 @@ section #fotografia #btn_descargar_cv i {
 }
 
 section .slider .contenedor {
+    display: none;
+}
+
+section .slider .contenedor.active {
     display: grid;
     grid-template-columns: 1fr 0.7fr;
 }
@@ -292,11 +303,14 @@ section .slider .contenedor {
 section .slider .contenedor .primario {
     min-height: 405px;
     max-height: 405px;
+    margin-right: 15px;
+    border: 3px solid var(--primary-light);
 }
 
 section .slider .contenedor .secundario .contenedor-foto {
     min-height: 282px;
     max-height: 282px;
+    opacity: 0.2;
 }
 
 section .slider .contenedor .primario,
@@ -307,13 +321,13 @@ section .slider .contenedor .secundario .contenedor-foto {
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    border-radius: var(--border-radius);
 }
 
 section .slider .contenedor .primario img,
 section .slider .contenedor .secundario .contenedor-foto img {
     max-width: 100%;
     padding: 30px;
-    border-radius: var(--border-radius);
     opacity: 0.5;
     transition: all .5s;
 }
@@ -321,7 +335,7 @@ section .slider .contenedor .secundario .contenedor-foto img {
 section .slider .contenedor .primario img.active,
 section .slider .contenedor .secundario .contenedor-foto img.active {
     max-width: 100%;
-    padding: 10px;
+    padding: 0px;
     opacity: 1;
 }
 

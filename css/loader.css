@@ -13,7 +13,6 @@
 #content-loader #loader {
     width: 100px;
     height: 150px;
-    /* background-color: red; */
     position: relative;
 }
 
@@ -22,21 +21,19 @@
     content: '';
     height: 80px;
     width: 80px;
-    /* background-color: blue; */
     border-radius: 50%;
-    border-top: 10px solid white;
+    border-top: 10px solid var(--secondary);
     border-left: 10px solid transparent;
     border-bottom: 10px solid white;
     border-right: 10px solid transparent;
-    animation: preloader 0.5s infinite;
-    /* transform: rotate(45deg); */
+    animation: preloader 0.6s infinite;
 }
 
 @keyframes preloader {
-    from {
+    0% {
         transform: rotate(45deg);
     }
-    to {
+    100% {
         transform: rotate(405deg);
     }
 }
@@ -50,6 +47,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: green; */
     color: white;
 }
