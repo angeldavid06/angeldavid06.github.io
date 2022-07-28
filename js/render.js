@@ -2,6 +2,7 @@ import { APP } from "./env.js";
 import { generate_menu } from "../modules/render/menu/generate_menu.js";
 import { generate_main } from "../modules/render/main/generate_main.js";
 import { generate_formacion } from "../modules/render/formacion/generate_formacion.js";
+import { generate_skills } from "../modules/render/habilidades/generate_skills.js";
 
 export const render_app = (json) => {
     const fragment_app = APP.D.createDocumentFragment();
@@ -9,7 +10,8 @@ export const render_app = (json) => {
         auxiliar_elements(),
         generate_menu(APP.COMPONENTS.menu),
         generate_main(APP.COMPONENTS.main,json.personal),
-        generate_formacion(APP.COMPONENTS.formacion,json.personal.education)
+        generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
+        generate_skills(APP.COMPONENTS.skills,json.skills)
     ];
     
     fragment_components.map(component => {

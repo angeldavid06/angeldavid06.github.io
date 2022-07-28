@@ -6,6 +6,7 @@ export const APP = {
     "COMPONENTS" : {
         "menu" : true,
         "main" : true,
-        "formacion" : true
+        "formacion" : true,
+        "skills" : true
     } 
 }
