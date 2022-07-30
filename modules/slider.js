@@ -13,8 +13,8 @@ const elemento_actual = (contenedor) => {
     return activo[0];
 }
 
-const slider_primario = (contenedor) => {
-    const contenedor_slider_principal = contenedor.getElementsByClassName('primario');
+const slider_primario = (contenedor,slider) => {
+    const contenedor_slider_principal = contenedor.getElementsByClassName('primario-'+slider);
     const activo = elemento_actual(contenedor_slider_principal[0]);
     const cantidad_imgs = cantidad_elementos(contenedor_slider_principal[0]);
     let siguiente = parseInt(activo.dataset.principal) + 1;
@@ -32,8 +32,8 @@ const slider_primario = (contenedor) => {
     document.getElementById(id).classList.add('active');
 }
 
-const slider_secundario = (contenedor) => {
-    const contenedor_slider_principal = contenedor.getElementsByClassName('secundario');
+const slider_secundario = (contenedor,slider) => {
+    const contenedor_slider_principal = contenedor.getElementsByClassName('secundario-'+slider);
     const contenedor_imgs = contenedor_slider_principal[0].getElementsByClassName('contenedor-foto')
     const activo = elemento_actual(contenedor_imgs[0]);
     const cantidad_imgs = cantidad_elementos(contenedor_imgs[0]);
@@ -42,7 +42,6 @@ const slider_secundario = (contenedor) => {
 
     if (activo.dataset.slide == cantidad_imgs){
         contenedor_imgs[0].scrollLeft = 0;
-        console.log(siguiente);
         siguiente -= (cantidad_imgs);
     } else {
         contenedor_imgs[0].scrollLeft = activo.clientWidth * activo.dataset.slide;
@@ -55,6 +54,6 @@ const slider_secundario = (contenedor) => {
 
 export const slider = (id) => {
     const slider_principal = contenedor_slider(id);
-    slider_primario(slider_principal)
-    slider_secundario(slider_principal)
+    slider_primario(slider_principal,id)
+    slider_secundario(slider_principal,id)
 }

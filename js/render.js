@@ -13,7 +13,7 @@ export const render_app = (json) => {
         generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
         generate_skills(APP.COMPONENTS.skills,json.skills)
     ];
-    
+
     fragment_components.map(component => {
         if (component != false) {
             fragment_app.appendChild(component);
