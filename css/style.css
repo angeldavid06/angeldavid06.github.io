@@ -298,19 +298,24 @@ section .slider .contenedor {
 section .slider .contenedor.active {
     display: grid;
     grid-template-columns: 1fr 0.7fr;
+    grid-gap: 15px;
 }
 
 section .slider .contenedor .primario {
     min-height: 405px;
     max-height: 405px;
-    margin-right: 15px;
-    border: 3px solid var(--primary-light);
+    border: 3px solid var(--primary-dark);
 }
 
 section .slider .contenedor .secundario .contenedor-foto {
     min-height: 282px;
     max-height: 282px;
     opacity: 0.2;
+    transition: all 0.5s;
+}
+
+section .slider .contenedor .secundario .contenedor-foto:hover {
+    opacity: 1;
 }
 
 section .slider .contenedor .primario,
@@ -330,6 +335,9 @@ section .slider .contenedor .secundario .contenedor-foto img {
     padding: 30px;
     opacity: 0.5;
     transition: all .5s;
+    border-radius: var(--border-radius);
+    min-width: 100%;
+    width: 100%;
 }
 
 section .slider .contenedor .primario img.active,
@@ -342,7 +350,7 @@ section .slider .contenedor .secundario .contenedor-foto img.active {
 section .slider .contenedor .secundario .opciones-slider {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px 0px;
 }
 
 section .slider .contenedor .secundario .opciones-slider button {
@@ -350,11 +358,29 @@ section .slider .contenedor .secundario .opciones-slider button {
     color: var(--primary-text);
     border: none;
     border-radius: var(--btn-radius);
-    padding: 10px;
+    padding: 15px 20px;
+    width: 100%;
     cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
 }
 
 section .slider .contenedor .secundario .opciones-slider button:hover {
     background-color: var(--secondary);
+    color: var(--secondary-text);
+    padding: 15px 110px 15px 0px;
+}
+
+section .slider .contenedor .secundario .opciones-slider button:hover i {
+    right: 20px;
+}
+
+section .slider .contenedor .secundario .opciones-slider button i {
+    position: absolute;
+    font-size: 1em;
+    top: 17px;
+    right: -20px;
+    transition: all 0.1s;
     color: var(--secondary-text);
 }

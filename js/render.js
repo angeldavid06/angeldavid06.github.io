@@ -11,6 +11,7 @@ export const render_app = (json) => {
         generate_menu(APP.COMPONENTS.menu),
         generate_main(APP.COMPONENTS.main,json.personal),
         generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
+        generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
         generate_skills(APP.COMPONENTS.skills,json.skills)
     ];
 

@@ -15,14 +15,13 @@ export const generate_formacion = (status,json) => {
                                             '<div class="tipo_formacion">';
         structure += generate_titles(json);
 
-        structure += '</div><div class="descripcion">';
+        structure += '</div><div id="descripcion-'+APP.SLIDER.images+'" data-info="'+APP.SLIDER.images+'" class="descripcion">';
 
         structure += generate_school(json.school);
 
         structure += '</div></div>';
 
         structure += generate_slider(json);
-
         
         tag_formacion.innerHTML = structure;
         return tag_formacion;
@@ -37,7 +36,7 @@ const generate_titles = (education) => {
     let contador = 0;
     
     keys.map(title => {
-        (title == 'school' ? title = 'Académica' : title = 'Cursos'); 
+        (title == 'school' ? title = 'Académica' : title = 'Complementaria'); 
         structure_string += '<div class="tipo">'+
                                 '<h1>'+title+'</h1>'+
                             '</div>';

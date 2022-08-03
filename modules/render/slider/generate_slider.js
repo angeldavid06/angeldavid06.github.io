@@ -40,7 +40,15 @@ export const generate_slider = (json) => {
 
     structure_string += '</div>'+
                         '<div class="opciones-slider">'+
-                            '<button class="material-symbols-rounded" data-slider="'+APP.SLIDER.images+'" data-siguiente="true">arrow_forward_ios</button>'+
+                            // '<button class="material-symbols-rounded" data-slider="'+APP.SLIDER.images+'" data-siguiente="true">arrow_forward_ios</button>'+
+                            '<button data-slider="'+APP.SLIDER.images+'" data-siguiente="true">'+
+                                '<i class="material-symbols-rounded">arrow_forward_ios</i>'+
+                                'Siguiente'+
+                            '</button>'+
+                            // '<button data-slider="'+APP.SLIDER.images+'" data-anterior="true">'+
+                                // '<i class="material-symbols-rounded">arrow_forward_ios</i>'+
+                            //     'Anterior'+
+                            // '</button>'+
                         '</div></div></div></div>';
     
     APP.SLIDER.images += 1;

@@ -4,10 +4,10 @@ export const APP = {
     "D" : document,
     "RESPONSE" : {},
     "COMPONENTS" : {
-        "menu" : false,
-        "main" : false,
+        "menu" : true,
+        "main" : true,
         "formacion" : true,
-        "skills" : false
+        "skills" : true
     },
     "SLIDER" : {
         "bubbles" : 1,
