@@ -206,11 +206,25 @@ section #titulo .titulo .tipo_formacion {
     overflow-y: hidden;
 }
 
+section .descripciones {
+    max-height: 180px;
+    overflow: hidden;
+}
+
 section .descripcion {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: flex-start;
     overflow-y: hidden;
     overflow-x: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+
+section .descripcion.active {
+    opacity: 1;
 }
 
 section .descripcion ul,

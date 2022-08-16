@@ -15,9 +15,11 @@ export const generate_formacion = (status,json) => {
                                             '<div class="tipo_formacion">';
         structure += generate_titles(json);
 
-        structure += '</div><div id="descripcion-'+APP.SLIDER.images+'" data-info="'+APP.SLIDER.images+'" class="descripcion">';
+        structure += '</div>'+
+                        '<div id="descripciones-formacion" class="descripciones">';
 
-        structure += generate_school(json.school);
+        structure += generate_schools(json.school);
+        structure += generate_courses(json.courses);
 
         structure += '</div></div>';
 
@@ -36,7 +38,12 @@ const generate_titles = (education) => {
     let contador = 0;
     
     keys.map(title => {
-        (title == 'school' ? title = 'Académica' : title = 'Complementaria'); 
+        if (title == 'school') {
+            title = 'Académica'
+        } else if (title == 'courses') {
+            title = 'Complementaria'
+        }
+    
         structure_string += '<div class="tipo">'+
                                 '<h1>'+title+'</h1>'+
                             '</div>';
@@ -59,9 +66,11 @@ const generate_titles = (education) => {
     return structure_string;
 }
 
-const generate_school = (schools) => {
+const generate_schools = (schools) => {
     let structure_string = '';
     let contador = 1;
+
+    structure_string += '<div id="descripcion-'+APP.SLIDER.images+'" data-info="'+APP.SLIDER.images+'" class="descripcion descripcion-'+APP.SLIDER.images+' active">';
 
     schools.forEach(el => {
         structure_string +=  '<div id="descripcion_'+contador+'" class="contenedor_descripcion">'+
@@ -75,9 +84,31 @@ const generate_school = (schools) => {
         contador++;
     });
 
+    structure_string += '</div>';
+
     return structure_string;
 }
 
 const generate_courses = (courses) => {
     console.log(Object.keys(courses).length);
+    let structure_string = '';
+    let contador = 1;
+
+    structure_string += '<div id="descripcion-'+(APP.SLIDER.images+1)+'" data-info="'+(APP.SLIDER.images+1)+'" class="descripcion descripcion-'+(APP.SLIDER.images+1)+'">';
+
+    courses.forEach(el => {
+        structure_string +=  '<div id="descripcion_'+contador+'" class="contenedor_descripcion">'+
+                                        '<p class="p-titulo">Plataforma</p>'+
+                                        '<p>'+el.institute+'</p>'+
+                                        '<p class="p-titulo">Curso</p>'+
+                                        '<p>'+el.course+'</p>'+
+                                        '<p class="p-titulo">Fecha</p>'+
+                                        '<p>'+el.period+'</p>'+
+                                    '</div>';
+        contador++;
+    });
+
+    structure_string += '</div>';
+
+    return structure_string;
 }

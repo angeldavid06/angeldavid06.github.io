@@ -2,6 +2,7 @@ import { APP } from "./env.js";
 import { generate_menu } from "../modules/render/menu/generate_menu.js";
 import { generate_main } from "../modules/render/main/generate_main.js";
 import { generate_formacion } from "../modules/render/formacion/generate_formacion.js";
+import { generate_experiencia } from "../modules/render/experiencia/generate_experiencia.js";
 import { generate_skills } from "../modules/render/habilidades/generate_skills.js";
 
 export const render_app = (json) => {
@@ -11,8 +12,8 @@ export const render_app = (json) => {
         generate_menu(APP.COMPONENTS.menu),
         generate_main(APP.COMPONENTS.main,json.personal),
         generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
-        generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
-        generate_skills(APP.COMPONENTS.skills,json.skills)
+        generate_skills(APP.COMPONENTS.skills,json.skills),
+        generate_experiencia(APP.COMPONENTS.formacion,json.personal.education)
     ];
 
     fragment_components.map(component => {
