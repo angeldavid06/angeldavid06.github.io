@@ -219,11 +219,14 @@ section .descripcion {
     justify-content: flex-start;
     overflow-y: hidden;
     overflow-x: hidden;
+}
+
+section .descripcion.multiple {
     opacity: 0;
     transition: all .5s;
 }
 
-section .descripcion.active {
+section .descripcion.multiple.active {
     opacity: 1;
 }
 
@@ -305,14 +308,22 @@ section #fotografia #btn_descargar_cv i {
     color: var(--secondary-text);
 }
 
-section .slider .contenedor {
-    display: none;
+section .slider {
+    height: 405px;
+    max-height: 405px;
+    overflow: hidden;
 }
 
-section .slider .contenedor.active {
+section .slider .contenedor {
     display: grid;
     grid-template-columns: 1fr 0.7fr;
     grid-gap: 15px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+section .slider .contenedor.active-slide {
+    opacity: 1;
 }
 
 section .slider .contenedor .primario {

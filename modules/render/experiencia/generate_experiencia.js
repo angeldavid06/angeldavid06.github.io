@@ -1,5 +1,5 @@
 import { APP } from "../../../js/env.js";
-import { generate_slider } from "../slider/generate_slider.js";
+import { init_slider,generate_slider,finish_slider } from "../slider/generate_slider.js";
 
 export const generate_experiencia = (status,json) => {
     if (status) {
@@ -21,8 +21,12 @@ export const generate_experiencia = (status,json) => {
 
         structure += '</div></div></div>';
 
+        structure += init_slider();
+
         structure += generate_slider(json);
         
+        structure += finish_slider();
+
         tag_formacion.innerHTML = structure;
         return tag_formacion;
     } else {

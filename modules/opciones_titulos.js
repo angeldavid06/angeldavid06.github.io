@@ -4,6 +4,20 @@ const num_opcion = (tipo) => {
     }
 }
 
+const change_slider = (num_opcion) => {
+    num_opcion = parseInt(num_opcion);
+    const slider = document.getElementsByClassName('slider');
+    const slider_anterior = slider[0].getElementsByClassName('active-slide');
+    const slider_actual = document.getElementById('slider-'+(num_opcion+1));
+    const altura_slider = slider[0].clientHeight;
+
+    console.log(slider_anterior[0]);
+    
+    slider[0].scrollTop = altura_slider * num_opcion;
+    slider_anterior[0].classList.remove('active-slide');
+    slider_actual.classList.add('active-slide');
+}
+
 const mover_clase_active = (num_opcion,tipo) => {
     const contenedor = document.getElementsByClassName('opciones-'+tipo);
     const contenedor_descripcion = document.getElementById('descripciones-'+tipo);
@@ -15,11 +29,12 @@ const mover_clase_active = (num_opcion,tipo) => {
     descripcion_anterior[0].classList.remove('active');
     descripcion_actual[0].classList.add('active');
     anterior[0].classList.remove('active');
-    actual[0].classList.add('active')
+    actual[0].classList.add('active');
 }
 
 export const cambiar_tipo_titulo = (tipo,opcion) => {
     mover_clase_active(opcion,tipo);
+    change_slider(opcion);
     const h_titulos = document.getElementsByClassName("tipo_"+tipo)[0].clientHeight;
     const h_descripciones = document.getElementById('descripciones-'+tipo).clientHeight;
     

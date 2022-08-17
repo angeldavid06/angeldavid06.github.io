@@ -1,14 +1,24 @@
 import { APP } from "../../../js/env.js";
 
+export const init_slider = () => {
+    return '<div class="slider">';
+}
+
+export const finish_slider = () => {
+    return '';
+}
+
 export const generate_slider = (json) => {
-    let structure_string = '<div class="slider">';
+    let structure_string;
     let contador = APP.SLIDER.images;
     let slide = 1;
     let clase = '';
+    let active = '';
     const urls = get_url_image(json.school);
 
+    (APP.SLIDER.images == 1 ? active = 'active-slide' : active = '');
     
-    structure_string += '<div id="slider-'+APP.SLIDER.images+'" class="contenedor active">'+
+    structure_string = '<div id="slider-'+APP.SLIDER.images+'" class="contenedor '+active+'">'+
                         '<div class="primario primario-'+APP.SLIDER.images+'">';
     
     json.school.forEach(inf => {
@@ -49,7 +59,7 @@ export const generate_slider = (json) => {
                                 // '<i class="material-symbols-rounded">arrow_forward_ios</i>'+
                             //     'Anterior'+
                             // '</button>'+
-                        '</div></div></div></div>';
+                        '</div></div></div>';
     
     APP.SLIDER.images += 1;
     

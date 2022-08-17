@@ -1,5 +1,5 @@
 import { APP } from "../../../js/env.js";
-import { generate_slider } from "../slider/generate_slider.js";
+import { init_slider,generate_slider,finish_slider } from "../slider/generate_slider.js";
 
 export const generate_formacion = (status,json) => {
     if (status) {
@@ -23,8 +23,13 @@ export const generate_formacion = (status,json) => {
 
         structure += '</div></div>';
 
+        structure += init_slider();
+
+        structure += generate_slider(json);
         structure += generate_slider(json);
         
+        structure += finish_slider();
+
         tag_formacion.innerHTML = structure;
         return tag_formacion;
     } else {
@@ -70,7 +75,7 @@ const generate_schools = (schools) => {
     let structure_string = '';
     let contador = 1;
 
-    structure_string += '<div id="descripcion-'+APP.SLIDER.images+'" data-info="'+APP.SLIDER.images+'" class="descripcion descripcion-'+APP.SLIDER.images+' active">';
+    structure_string += '<div id="descripcion-'+APP.SLIDER.images+'" data-info="'+APP.SLIDER.images+'" class="descripcion multiple descripcion-'+APP.SLIDER.images+' active">';
 
     schools.forEach(el => {
         structure_string +=  '<div id="descripcion_'+contador+'" class="contenedor_descripcion">'+
@@ -90,11 +95,10 @@ const generate_schools = (schools) => {
 }
 
 const generate_courses = (courses) => {
-    console.log(Object.keys(courses).length);
     let structure_string = '';
     let contador = 1;
 
-    structure_string += '<div id="descripcion-'+(APP.SLIDER.images+1)+'" data-info="'+(APP.SLIDER.images+1)+'" class="descripcion descripcion-'+(APP.SLIDER.images+1)+'">';
+    structure_string += '<div id="descripcion-'+(APP.SLIDER.images+1)+'" data-info="'+(APP.SLIDER.images+1)+'" class="descripcion multiple descripcion-'+(APP.SLIDER.images+1)+'">';
 
     courses.forEach(el => {
         structure_string +=  '<div id="descripcion_'+contador+'" class="contenedor_descripcion">'+
