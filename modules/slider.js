@@ -26,7 +26,7 @@ const slider_primario = (contenedor,slider) => {
     
     siguiente = parseInt(activo.dataset.principal) + 1;
     let id = '';
-
+    
     if (activo.dataset.slide == cantidad_imgs){
         contenedor_slider_principal[0].scrollLeft = 0;
         contenedor_slider_info.scrollLeft = 0;
@@ -35,9 +35,9 @@ const slider_primario = (contenedor,slider) => {
         contenedor_slider_principal[0].scrollLeft = contenedor_slider_principal[0].clientWidth * activo.dataset.slide;
         contenedor_slider_info.scrollLeft = contenedor_slider_info.clientWidth * activo.dataset.slide;
     }
-    
+
     id = activo.getAttribute('id').split('-')[0] + '-' + siguiente;
-    activo.classList.remove('active')
+    activo.classList.remove('active');
     document.getElementById(id).classList.add('active');
 }
 
@@ -48,7 +48,7 @@ const slider_secundario = (contenedor,slider) => {
     cantidad_imgs = cantidad_elementos(contenedor_imgs[0]);
     siguiente = parseInt(activo.dataset.secundario) + 1;
     let id = '';
-
+    
     if (activo.dataset.slide == cantidad_imgs){
         contenedor_imgs[0].scrollLeft = 0;
         siguiente -= (cantidad_imgs);
@@ -57,7 +57,7 @@ const slider_secundario = (contenedor,slider) => {
     }
     
     id = activo.getAttribute('id').split('-')[0] + '-' + siguiente;
-    activo.classList.remove('active')
+    activo.classList.remove('active');
     document.getElementById(id).classList.add('active');
 }
 

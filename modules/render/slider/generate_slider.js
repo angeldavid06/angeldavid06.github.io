@@ -1,10 +1,15 @@
 import { APP } from "../../../js/env.js";
 
+let slider_counter = 1;
+let slider_flag = true;
+
 export const init_slider = () => {
-    return '<div class="slider">';
+    return '<div class="slider" id="slider-count-'+slider_counter+'">';
 }
 
 export const finish_slider = () => {
+    slider_counter++;
+    slider_flag = true;
     return '';
 }
 
@@ -16,8 +21,13 @@ export const generate_slider = (json) => {
     let active = '';
     const urls = get_url_image(json.school);
 
-    (APP.SLIDER.images == 1 ? active = 'active-slide' : active = '');
-    
+    if (slider_flag) {
+        active = 'active-slide';
+        slider_flag = false;
+    } else {
+        active = '';
+    }
+
     structure_string = '<div id="slider-'+APP.SLIDER.images+'" class="contenedor '+active+'">'+
                         '<div class="primario primario-'+APP.SLIDER.images+'">';
     

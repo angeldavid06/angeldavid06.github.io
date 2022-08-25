@@ -11,7 +11,7 @@ const change_slider = (num_opcion) => {
     const slider_actual = document.getElementById('slider-'+(num_opcion+1));
     const altura_slider = slider[0].clientHeight;
 
-    console.log(slider_anterior[0]);
+    // console.log(slider_anterior[0]);
     
     slider[0].scrollTop = altura_slider * num_opcion;
     slider_anterior[0].classList.remove('active-slide');
