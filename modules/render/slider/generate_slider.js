@@ -10,6 +10,7 @@ export const init_slider = () => {
 export const finish_slider = () => {
     slider_counter++;
     slider_flag = true;
+    APP.SLIDER.images++;
     return '';
 }
 
@@ -72,7 +73,7 @@ export const generate_slider = (json) => {
                         '</div></div></div>';
     
     APP.SLIDER.images += 1;
-    
+
     return structure_string;
 }
 

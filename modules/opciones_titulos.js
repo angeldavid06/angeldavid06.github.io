@@ -1,6 +1,8 @@
 const num_opcion = (tipo) => {
     if (tipo == 'formacion') {
         return 0;
+    } else if (tipo == 'tech') {
+        return 1;
     }
 }
 
@@ -10,8 +12,6 @@ const change_slider = (num_opcion) => {
     const slider_anterior = slider[0].getElementsByClassName('active-slide');
     const slider_actual = document.getElementById('slider-'+(num_opcion+1));
     const altura_slider = slider[0].clientHeight;
-
-    // console.log(slider_anterior[0]);
     
     slider[0].scrollTop = altura_slider * num_opcion;
     slider_anterior[0].classList.remove('active-slide');

@@ -200,8 +200,11 @@ section #titulo .titulo {
     align-content: flex-start;
 }
 
+section #titulo .titulo > h1 {
+    padding: 0px 10px 0px 0px;
+}
+
 section #titulo .titulo .tipo_formacion {
-    padding: 0px 0px 0px 10px;
     max-height: 2.55em;
     overflow-y: hidden;
 }
@@ -408,4 +411,32 @@ section .slider .contenedor .secundario .opciones-slider button i {
     right: -20px;
     transition: all 0.1s;
     color: var(--secondary-text);
+}
+
+/* Size FullHD 100% */
+@media screen and (max-width: 1920px) {
+    body {
+        /* background-color: red; */
+    }
+}
+
+/* Size FullHD 125% */
+@media screen and (max-width: 1536px) {
+    body {
+        /* background-color: green; */
+    }
+}
+
+/* Size FullHD 150% */
+@media screen and (max-width: 1280px) {
+    body {
+        /* background-color: blue; */
+    }
+}
+
+/* Size HD 100% */
+@media screen and (max-width: 1366px) {
+    body {
+        background-color: gray;
+    }
 }

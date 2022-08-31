@@ -63,25 +63,25 @@
         "UI - UX"
     ],
     "tecnologies" : {
-        "languages" : [
+        "Lenguajes de Desarrollo" : [
             "HTML",
             "CSS",
             "SQL"
         ],
-        "programming" : [
+        "Lenguajes de Programación" : [
             "JavaScript",
             "PHP",
             "Java"    
         ],
-        "office" : [
+        "Software de Ofimatica" : [
             "Microsoft Office"
         ],
-        "ui_ux" : [
+        "Software de UI y UX" : [
             "Figma",
             "Adobe Xd",
             "Adobe Illustrator"
         ],
-        "others" : [
+        "Herramientas" : [
             "Git",
             "VScode",
             "Apache NetBeans",

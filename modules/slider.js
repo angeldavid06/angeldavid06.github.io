@@ -51,7 +51,7 @@ const slider_secundario = (contenedor,slider) => {
     
     if (activo.dataset.slide == cantidad_imgs){
         contenedor_imgs[0].scrollLeft = 0;
-        siguiente -= (cantidad_imgs);
+        siguiente -= cantidad_imgs;
     } else {
         contenedor_imgs[0].scrollLeft = contenedor_slider_principal[0].clientWidth * activo.dataset.slide;
     }

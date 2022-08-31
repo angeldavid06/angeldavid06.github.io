@@ -12,8 +12,8 @@ export const render_app = (json) => {
         generate_menu(APP.COMPONENTS.menu),
         generate_main(APP.COMPONENTS.main,json.personal),
         generate_formacion(APP.COMPONENTS.formacion,json.personal.education),
-        generate_skills(APP.COMPONENTS.skills,json.skills),
-        generate_experiencia(APP.COMPONENTS.formacion,json.personal.education)
+        generate_skills(APP.COMPONENTS.skills,json.skills, json.tecnologies),
+        generate_experiencia(APP.COMPONENTS.experience,json.personal.education)
     ];
 
     fragment_components.map(component => {

@@ -7,7 +7,8 @@ export const APP = {
         "menu" : true,
         "main" : true,
         "formacion" : true,
-        "skills" : true
+        "skills" : true,
+        "experience" : true
     },
     "SLIDER" : {
         "bubbles" : 1,
