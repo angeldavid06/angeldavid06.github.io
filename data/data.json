@@ -1,0 +1,64 @@
+{
+    "personal" : {
+        "name" : "Angel David",
+        "lastname" : "Martinez Mendoza",
+        "contact" : {
+            "phone" : "55 6427 1307",
+            "home" : "",
+            "email" : "angel.david.mtz.mdza@gmail.com"
+        },
+        "profile" : ""
+    },
+    "experience" : [
+        {
+            "company" : "Grupo AXO",
+            "job" : "Desarrollador PHP Senior",
+            "start-date" : "Julio 2023",
+            "end-date" : "Activo",
+            "description" : ""
+        },
+        {
+            "company" : "Softtek",
+            "job" : "Software Developer",
+            "start-date" : "Mayo 2022",
+            "end-date" : "Junio 2023",
+            "description" : ""
+        },
+        {
+            "company" : "Forjadora Mexicana de Tornillos, S.A. de C.V.",
+            "job" : "Gerente de Sistemas",
+            "start-date" : "Febrero 2022",
+            "end-date" : "Mayo 2022",
+            "description" : ""
+        }
+    ],
+    "scholarship" : [
+        {
+            "school" : "Instituto Tecnológico de Tláhuac",
+            "carrier" : "Ingeniería en Sistemas Computacionales",
+            "start-date" : "2017",
+            "end-date" : "2021"
+        },
+        {
+            "school" : "Centro de Estudios Tecnológicos, industrial y de servicios No. 1",
+            "carrier" : "Técnico en Programación",
+            "start-date" : "2014",
+            "end-date" : "2017"
+        }
+    ],
+    "courses" : [
+        {
+            "name" : "Diseño de sitios web responsivos",
+            "platform" : "Capacitate para el empleo",
+            "date" : "Octube 2021"
+        }
+    ],
+    "skills" : {
+        "personal" : [
+
+        ],
+        "professional" : [
+
+        ]
+    }
+}
